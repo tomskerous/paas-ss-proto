@@ -11,6 +11,10 @@ ss = Blueprint('ss', __name__, url_prefix='/ss')
 def sign_in():
   return render_template('sign_in.html')
 
+@ss.route('/request-account')
+def request_account():
+  return render_template('request_account.html')
+
 @ss.route('/services')
 def services():
   return render_template('services.html')
