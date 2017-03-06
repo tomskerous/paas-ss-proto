@@ -11,5 +11,16 @@ ss = Blueprint('ss', __name__, url_prefix='/ss')
 def sign_in():
   return render_template('sign_in.html')
 
+@ss.route('/services')
+def services():
+  return render_template('services.html')
 
+@ss.route('/services/create')
+def create_service():
+  return render_template('create_service.html')
 
+# eventually make this accept name of a <service>
+# and get service data from json file
+@ss.route('/services/service')
+def services_service():
+  return render_template('services_service.html')
