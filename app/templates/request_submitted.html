@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Course booked | Course{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-xlarge visually-hidden">Account request submitted</h1>
+
+  <div class="callout">
+    <h2 class="heading-large callout__heading">Account request submitted</h2>
+    <div class="lede">
+      <span>Email</span>
+      <p class="ref-number">colm.britton@digital.cabinet-office.gov.uk</p>
+      <span>Department</span>
+      <p class="ref-number">GDS</p>
+    </div>
+  </div>
+
+  <p class="with-hr"><i class="icon-email"></i>We have sent you a confirmation email.</p>
+
+  <h3 class="heading-medium">What happens next?</h3>
+
+  <p class="text">We have sent your details to the PaaS service team. They will action your request.</p>
+
+  <p class="text">Once your account is confirmed we will contact you with the credentials.</p>
+
+  <p class="text"><a href="/product-page">Read more about PaaS</a></p>
+
+</main>
+
+{% endblock %}

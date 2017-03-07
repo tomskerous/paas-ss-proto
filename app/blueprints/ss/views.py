@@ -15,6 +15,10 @@ def sign_in():
 def request_account():
   return render_template('request_account.html')
 
+@ss.route('/request-submitted')
+def request_submitted():
+  return render_template('request_submitted.html')
+
 @ss.route('/services')
 def services():
   return render_template('services.html')

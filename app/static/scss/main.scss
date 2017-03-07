@@ -16,6 +16,8 @@
 @import "modules/phase-banner.scss";
 @import "modules/skip-link.scss";
 
+@import "patterns/callouts.scss";
+
 #main {
   display: block;
   margin-bottom: $gutter * 3;
@@ -23,4 +25,9 @@
 
 .container {
   @extend %site-width-container;
+}
+
+.with-hr {
+  border-bottom: 1px solid $grey-2;
+  padding: $gutter-half 0;
 }
