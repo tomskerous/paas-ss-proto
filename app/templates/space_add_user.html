@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Sample page - Flask prototyping{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <h1 class="heading-large">Add user to space</h1>
+
+  <form method="post" class="form">
+
+    <div class="form-group">
+      <label class="form-label" for="email_address">
+        Email address
+      </label>
+      <input class="form-control form-control-1-1" data-module="" id="email_address" name="email_address" rows="8" type="email" value="">
+    </div>
+
+    <fieldset class="form-group">
+      <legend class="form-label">
+        Role
+      </legend>
+
+      <label class="block-label selection-button-radio" for="space_manager">
+        <input id="space_manager" name="space_role" type="radio" value="y" >
+          Space_manager
+      </label>
+
+      <label class="block-label selection-button-radio" for="space_developer">
+        <input id="space_developer" name="space_role" type="radio" value="y" >
+        Space developer
+      </label>
+
+  </fieldset>
+
+  <div class="form-group">
+    <input type="submit" class="button" value="Add user">
+  </div>
+
+  </form>
+
+</main>
+{% endblock %}
