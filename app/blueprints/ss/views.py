@@ -19,6 +19,10 @@ def request_account():
 def request_submitted():
   return render_template('request_submitted.html')
 
+@ss.route('/spaces/create')
+def create_space():
+  return render_template('create_space.html')
+
 @ss.route('/services')
 def services():
   return render_template('services.html')
