@@ -51,7 +51,33 @@ code {
   word-break: break-word;
 }
 
+.highlight {
+  font-weight: 700;
+}
+
 .form-additional-link {
   display: block;
   margin-top: 15px;
+}
+
+.dashboard-section {
+  .action-link {
+    float: right;
+    margin-top: -50px;
+  }
+}
+
+.space {
+  margin-top: 10px;
+  border-top: 1px solid $border-colour;
+}
+
+.apps-list {
+  border-right: 1px solid $border-colour;
+}
+
+.edit-name {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 15px;
 }

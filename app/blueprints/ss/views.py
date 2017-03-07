@@ -15,6 +15,10 @@ def sign_in():
 def two_fa():
   return render_template('2fa.html')
 
+@ss.route('/account')
+def account():
+  return render_template('account-page.html')
+
 @ss.route('/request-account')
 def request_account():
   return render_template('request_account.html')
@@ -41,6 +45,6 @@ def create_service():
 
 # eventually make this accept name of a <service>
 # and get service data from json file
-@ss.route('/services/service')
-def services_service():
-  return render_template('services_service.html')
+@ss.route('/spaces/space')
+def space():
+  return render_template('space.html')

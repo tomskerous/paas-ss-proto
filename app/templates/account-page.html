@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Sample page - Flask prototyping{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <section class="dashboard-section">
+    <h2 class="heading-large">Organisation</h2>
+    <p class="lede">You belong to the <span class="highlight">csd-sso</span> organisation.</p>
+    <h4>Org managers</h4>
+    <ul>
+      <li>andy.driver@digital.cabinet-office.gov.uk</li>
+      <li>peter.chamberlin@digital.cabinet-office.gov.uk</li>
+    </ul>
+    <p><a href="">Read more about Organisations</a></p>
+  </section>
+
+  <section class="dashboard-section grid-row">
+    <div class="column-full">
+      <h2 class="heading-large">Spaces</h2>
+      <p class="lede">2 spaces available</p>
+      <a href="" class="action-link">Create new space</a>
+    </div>
+
+    <div class="column-full">
+      <div class="space">
+        <h3 class="heading-medium">
+          Sandbox
+          <span class="edit-name"><a href="">Edit name</a></span>
+        </h3>
+      </div>
+    </div>
+    <div class="column-half apps-list">
+      <p>There are 5 apps hosted in this space.</p>
+      <p><a href="">Manage apps</a></p>
+    </div>
+    <div class="column-half">
+      <p>There are 4 people with access to this space.</p>
+      <p><a href="">Manage access</a></p>
+    </div>
+
+    <div class="column-full">
+      <div class="space">
+        <h3 class="heading-medium">
+          Production
+          <span class="edit-name"><a href="">Edit name</a></span>
+        </h3>
+      </div>
+    </div>
+    <div class="column-half apps-list">
+      <p>There are 3 apps hosted in this space.</p>
+      <p><a href="">Manage apps</a></p>
+    </div>
+    <div class="column-half">
+      <p>There are 12 people with access to this space.</p>
+      <p><a href="">Manage access</a></p>
+    </div>
+
+    <div class="column-full">
+      <p><a href="">Read more about Spaces</a></p>
+    </div>
+  </section>
+
+<!-- ORG MANAGER
+  -->
+
+</main>
+
+{% endblock %}
