@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Sample page - Flask prototyping{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <a href="/" class="link-back">Back</a>
+
+  <h1 class="heading-large">Create a new space</h1>
+
+  <form action="" class="form">
+
+    <fieldset>
+
+      <legend class="visuallyhidden">Create a new space</legend>
+
+      <div class="form-group">
+        <label class="form-label" for="email-f1">Space name</label>
+        <input class="form-control" id="email-f1" type="text">
+      </div>
+
+    </fieldset>
+
+    <div class="form-group">
+      <button class="button">Create space</button>
+    </div>
+
+  </form>
+
+  <section class="documentation-section">
+    <p>You can also perform the same task at the commandline by using this:</p>
+    <p><code>cf create-space SPACENAME -o ORGNAME</code> </p>
+
+    <p><a href="">Read more about using PaaS on the commandline.</a></p>
+  </section>
+
+</main>
+{% endblock %}
