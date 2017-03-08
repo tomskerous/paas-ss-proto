@@ -64,12 +64,12 @@ Platform as a Service
         <p class="hero__description">
           GOV.UK Platform as a Service (PaaS) is a quick, easy and cheap way to deploy and host government applications. GOV.UK PaaS manages the platform infrastructure, so you can focus on building your digital services.
         </p>
-        <a href="/support.html" role="button" class="hero-button">
+        <a href="{{ url_for('ss.request_account') }}" role="button" class="hero-button">
           Ask for a trial account
         </a>
-        <!-- <span class="hero-alternative-action">
-          or <a href="#">do another thing</a> because reasons
-        </span> -->
+
+        <span>or <a href="{{ url_for('ss.sign_in') }}"> sign in</a> if you've used it before</span>
+
         <p>You’ll be able to deploy test applications in a safe environment and test the features of the command line tool.</p>
       </div>
       <div class="hero__aside-image">
