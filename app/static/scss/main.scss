@@ -65,6 +65,9 @@ code {
     float: right;
     margin-top: -50px;
   }
+  p:last-child {
+    margin-top: $gutter;
+  }
 }
 
 .space {
