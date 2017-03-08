@@ -2,6 +2,25 @@
 
 {% block page_title %}Sample page - Flask prototyping{% endblock %}
 
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a href="{{ url_for('base.product_page') }}" itemprop="item"><span itemprop="name">GOV.UK PaaS</span></a>
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">csd-sso</span></a>
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">sandbox</span></a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">Add user</span></a>
+    </li>
+  </ol>
+</nav>
+{% endblock %}
+
 {% block content %}
 <main id="content" role="main">
 
