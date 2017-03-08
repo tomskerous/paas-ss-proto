@@ -48,3 +48,7 @@ def create_service():
 @ss.route('/spaces/space')
 def space():
   return render_template('space.html')
+
+@ss.route('/apps/app')
+def app_details():
+  return render_template('app_details_page.html')

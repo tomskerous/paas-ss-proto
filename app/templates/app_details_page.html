@@ -1,0 +1,38 @@
+{% extends "layout-paas.html" %}
+
+{% block page_title %}Sample page - Flask prototyping{% endblock %}
+
+{% block header_nav %}
+  {% set username = "Colm Britton" %}
+  {% include "partial/signed-in-top-nav.html" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a href="{{ url_for('base.product_page') }}" itemprop="item"><span itemprop="name">GOV.UK PaaS</span></a>
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a href="{{ url_for('ss.account') }}" itemprop="item"><span itemprop="name">csd-sso</span></a>
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a href="{{ url_for('ss.space') }}" itemprop="item"><span itemprop="name">Sandbox</span></a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">ags-proto</span></a>
+    </li>
+  </ol>
+</nav>
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <h1 class="heading-large">
+    <span class="heading-secondary">Sandbox</span>
+    App
+  </h1>
+
+</main>
+{% endblock %}
