@@ -45,7 +45,7 @@
         </tr>
       </tbody>
     </table>
-    <p><a href="">Read more about Organisations</a></p>
+    <p><a href="https://docs.cloud.service.gov.uk/#organisations">Read more about Organisations</a></p>
   </section>
 
   <section class="dashboard-section grid-row">
@@ -53,7 +53,7 @@
       <h2 class="heading-large">Spaces</h2>
       <p class="text">Each organisation is divided into one or more spaces, which are used to organise app development, deployment, and maintenance.</p>
       <p class="lede">2 spaces available</p>
-      <a href="" class="action-link">Create new space</a>
+      <a href="{{ url_for('ss.create_space') }}" class="action-link">Create new space</a>
     </div>
 
     <div class="column-full">
@@ -65,12 +65,12 @@
       </div>
     </div>
     <div class="column-half apps-list">
-      <p>There are 5 apps hosted in this space.</p>
-      <p><a href="">Manage apps</a></p>
+      <p>There are 4 apps hosted in this space.</p>
+      <p><a href="{{ url_for('ss.space') }}">Manage apps</a></p>
     </div>
     <div class="column-half">
       <p>There are 4 people with access to this space.</p>
-      <p><a href="">Manage access</a></p>
+      <p><a href="{{ url_for('ss.space') }}">Manage access</a></p>
     </div>
 
     <div class="column-full">
@@ -83,15 +83,15 @@
     </div>
     <div class="column-half apps-list">
       <p>There are 3 apps hosted in this space.</p>
-      <p><a href="">Manage apps</a></p>
+      <p><a href="{{ url_for('ss.space') }}">Manage apps</a></p>
     </div>
     <div class="column-half">
       <p>There are 12 people with access to this space.</p>
-      <p><a href="">Manage access</a></p>
+      <p><a href="{{ url_for('ss.space') }}">Manage access</a></p>
     </div>
 
     <div class="column-full">
-      <p><a href="">Read more about Spaces</a></p>
+      <p><a href="https://docs.cloud.service.gov.uk/#spaces">Read more about Spaces</a></p>
     </div>
   </section>
 
