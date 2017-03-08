@@ -97,9 +97,13 @@ code {
   margin-bottom: $gutter;
 }
 
+.space-list {
+  margin-bottom: $gutter;
+}
+
 .space-list-item {
   border-top: 1px solid $border-colour;
-  padding: 8px 5px 5px;
+  padding: 8px 0 5px;
 
   &:last-child {
     border-bottom: 1px solid $border-colour;
