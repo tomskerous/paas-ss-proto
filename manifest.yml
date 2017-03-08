@@ -1,0 +1,5 @@
+---
+applications:
+- name: paas-ss-proto
+  memory: 128M
+  buildpack: python_buildpack
