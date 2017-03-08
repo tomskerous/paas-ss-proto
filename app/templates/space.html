@@ -26,10 +26,83 @@
 {% block content %}
 <main id="content" role="main">
 
-  <h1 class="heading-large">
+  <h1 class="heading-xlarge">
     <span class="heading-secondary">Spaces</span>
     Sandbox
   </h1>
+
+  <section class="space-section">
+    <div class="grid-row bottom-gutter">
+      <div class="column-two-thirds">
+        <h2 class="heading-large space-section__heading">
+          Space users
+        </h2>
+      </div>
+      <div class="column-third">
+        <a href="{{ url_for('ss.space_add_user') }}" class="button">Add user</a>
+      </div>
+    </div>
+
+    <ul class="user-list">
+      <li class="user-list-item">
+        <h3 class="user-name">Colm Britton&ensp;<span class="hint">(you)</span></h3>
+        <div class="grid-row">
+          <div class="column-third">
+            Space manager
+          </div>
+          <div class="column-third">
+            Last active: 08-03-17
+          </div>
+          <div class="column-third">
+            <a href="">Edit permissions</a>
+          </div>
+        </div>
+      </li>
+      <li class="user-list-item">
+        <h3 class="user-name">Tom Dolan&ensp;<span class="hint">tom.dolan@digital.cabinet-office.gov.uk</span></h3>
+        <div class="grid-row">
+          <div class="column-third">
+            Space developer
+          </div>
+          <div class="column-third">
+            Last active: 07-03-17
+          </div>
+          <div class="column-third">
+            <a href="">Edit permissions</a>
+          </div>
+        </div>
+      </li>
+      <li class="user-list-item">
+        <h3 class="user-name">Holly Challenger&ensp;<span class="hint">holly.challenger@digital.cabinet-office.gov.uk</span></h3>
+        <div class="grid-row">
+          <div class="column-third">
+            Space manager
+          </div>
+          <div class="column-third">
+            Last active: 04-03-17
+          </div>
+          <div class="column-third">
+            <a href="">Edit permissions</a>
+          </div>
+        </div>
+      </li>
+      <li class="user-list-item">
+        <h3 class="user-name">Niall Booth&ensp;<span class="hint">niall.booth@digital.cabinet-office.gov.uk</span></h3>
+        <div class="grid-row">
+          <div class="column-third">
+            Space developer
+          </div>
+          <div class="column-third">
+            Last active: 06-03-17
+          </div>
+          <div class="column-third">
+            <a href="">Edit permissions</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+  </section>
 
 </main>
 {% endblock %}

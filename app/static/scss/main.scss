@@ -84,3 +84,28 @@ code {
   font-weight: 400;
   padding-left: 15px;
 }
+
+.space-section__heading {
+  margin-top: 0;
+}
+
+.bottom-gutter {
+  margin-bottom: $gutter;
+}
+
+.user-list-item {
+  border-top: 1px solid $border-colour;
+  padding: 5px 5px;
+
+  &:last-child {
+    border-bottom: 1px solid $border-colour;
+  }
+
+  .user-name {
+    margin-bottom: 5px;
+  }
+}
+
+.hint {
+  color: $secondary-text-colour;
+}
