@@ -61,6 +61,13 @@ def space(space=""):
 
   return render_template('space.html', space=space)
 
-@ss.route('/apps/app')
-def app_details():
-  return render_template('app_details_page.html')
+@ss.route('/apps/')
+@ss.route('/apps/<appname>')
+def app_details(appname=""):
+  pathtodata = 'app/data/' + appname + '/.json'
+  paas_app = {'name': appname}
+  if os.path.isfile( pathtodata ):
+    with open('app/data/org.json') as data_file:
+      paas_app = json.load( data_file )
+
+  return render_template('app_details_page.html', paas_app=paas_app)
