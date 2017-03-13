@@ -14,13 +14,13 @@
       <a href="{{ url_for('base.product_page') }}" itemprop="item"><span itemprop="name">GOV.UK PaaS</span></a>
     </li>
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-      <a href="{{ url_for('ss.account') }}" itemprop="item"><span itemprop="name">csd-sso</span></a>
+      <a href="{{ url_for('ss.account') }}" itemprop="item"><span itemprop="name">{{ paas_app.org_name|default('csd-sso') }}</span></a>
     </li>
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-      <a href="{{ url_for('ss.space') }}" itemprop="item"><span itemprop="name">Sandbox</span></a>
+      <a href="{{ url_for('ss.space') }}" itemprop="item"><span itemprop="name">{{ paas_app.space_name|default('Sandbox') }}</span></a>
     </li>
     <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-      <a href="#main" itemprop="item"><span itemprop="name">ags-proto</span></a>
+      <a href="#main" itemprop="item"><span itemprop="name">{{ paas_app.name|default('testapp') }}</span></a>
     </li>
   </ol>
 </nav>
@@ -30,7 +30,7 @@
 <main id="content" role="main">
 
   <h1 class="heading-large">
-    <span class="heading-secondary">Sandbox</span>
+    <span class="heading-secondary">{{ paas_app.space_name|default('Sandbox') }}</span>
     {{ paas_app.name }}
   </h1>
 
