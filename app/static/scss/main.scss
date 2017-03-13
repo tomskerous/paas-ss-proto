@@ -131,3 +131,16 @@ code {
 .hint {
   color: $secondary-text-colour;
 }
+
+.further-info-section {
+  margin-top: $gutter * 1.5;
+
+  &:before {
+    content: " ";
+    border-top: 1px solid $border-colour;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+    display: block;
+    max-width: 30em;
+  }
+}
