@@ -5,6 +5,7 @@ from flask import (
   current_app)
 
 import json
+import os
 
 ss = Blueprint('ss', __name__, url_prefix='/ss')
 
@@ -49,9 +50,16 @@ def create_service():
 
 # eventually make this accept name of a <service>
 # and get service data from json file
-@ss.route('/spaces/space')
-def space():
-  return render_template('space.html')
+@ss.route('/spaces/')
+@ss.route('/spaces/<space>')
+def space(space=""):
+  pathtodata = 'app/data/' + space + '/.json'
+  space = {}
+  if os.path.isfile( pathtodata ):
+    with open('app/data/org.json') as data_file:
+      space = json.load( data_file )
+
+  return render_template('space.html', space=space)
 
 @ss.route('/apps/app')
 def app_details():

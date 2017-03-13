@@ -63,11 +63,11 @@
     </div>
     <div class="column-half apps-list">
       <p>There are 4 apps hosted in this space.</p>
-      <p><a href="{{ url_for('ss.space') }}">Manage apps</a></p>
+      <p><a href="{{ url_for('ss.space', space='sandbox') }}">Manage apps</a></p>
     </div>
     <div class="column-half">
       <p>There are 4 people with access to this space.</p>
-      <p><a href="{{ url_for('ss.space') }}">Manage access</a></p>
+      <p><a href="{{ url_for('ss.space', space='sandbox') }}">Manage access</a></p>
     </div>
 
     <div class="column-full">
@@ -80,11 +80,11 @@
     </div>
     <div class="column-half apps-list">
       <p>There are 3 apps hosted in this space.</p>
-      <p><a href="{{ url_for('ss.space') }}">Manage apps</a></p>
+      <p><a href="{{ url_for('ss.space', space='production') }}">Manage apps</a></p>
     </div>
     <div class="column-half">
       <p>There are 12 people with access to this space.</p>
-      <p><a href="{{ url_for('ss.space') }}">Manage access</a></p>
+      <p><a href="{{ url_for('ss.space', space='production') }}">Manage access</a></p>
     </div>
 
     <div class="column-full">
