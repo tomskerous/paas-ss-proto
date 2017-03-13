@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "name": "Colm Britton",
+      "email": "(you)",
+      "role": "Space manager",
+      "last_active": "08-03-17"
+    },
+    {
+      "name": "Tom Dolan",
+      "email": "tom.dolan@digital.cabinet-office.gov.uk",
+      "role": "Space developer",
+      "last_active": "07-03-17"
+    },
+    {
+      "name": "Holly Challenger",
+      "email": "holly.challenger@digital.cabinet-office.gov.uk",
+      "role": "Space manager",
+      "last_active": "04-03-17"
+    },
+    {
+      "name": "Niall Booth",
+      "email": "niall.booth@digital.cabinet-office.gov.uk",
+      "role": "Space developer",
+      "last_active": "06-03-17"
+    }
+  ]
+}

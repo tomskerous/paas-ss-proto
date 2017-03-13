@@ -53,10 +53,10 @@ def create_service():
 @ss.route('/spaces/')
 @ss.route('/spaces/<space>')
 def space(space=""):
-  pathtodata = 'app/data/' + space + '/.json'
+  pathtodata = 'app/data/spaces/' + space + '.json'
   space = {}
   if os.path.isfile( pathtodata ):
-    with open('app/data/org.json') as data_file:
+    with open( pathtodata ) as data_file:
       space = json.load( data_file )
 
   return render_template('space.html', space=space)

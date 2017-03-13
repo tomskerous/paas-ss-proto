@@ -1,0 +1,16 @@
+{% macro user_listing(user) %}
+    <li class="space-list-item">
+      <h3 class="user-name">{{ user.name }}&ensp;<span class="hint">{{ user.email|default('(you)') }}</span></h3>
+      <div class="grid-row">
+        <div class="column-third">
+          {{ user.role }}
+        </div>
+        <div class="column-third">
+          Last active: {{ user.last_active }}
+        </div>
+        <div class="column-third">
+          <a href="">Edit permissions</a>
+        </div>
+      </div>
+    </li>
+{% endmacro %}
