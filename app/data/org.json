@@ -1,0 +1,13 @@
+{
+  "name": "csd-sso",
+  "managers": [
+    {
+      "name": "Andy Driver",
+      "email": "andy.driver@digital.cabinet-office.gov.uk"
+    },
+    {
+      "name": "Peter Chamberlin",
+      "email": "peter.chamberlin@digital.cabinet-office.gov.uk"
+    }
+  ]
+}

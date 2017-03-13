@@ -4,6 +4,8 @@ from flask import (
   Blueprint,
   current_app)
 
+import json
+
 ss = Blueprint('ss', __name__, url_prefix='/ss')
 
 @ss.route('/')
@@ -17,7 +19,9 @@ def two_fa():
 
 @ss.route('/account')
 def account():
-  return render_template('account-page.html')
+  with open('app/data/org.json') as data_file:
+      org = json.load( data_file )
+  return render_template('account-page.html', org=org)
 
 @ss.route('/request-account')
 def request_account():
