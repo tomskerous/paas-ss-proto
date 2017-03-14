@@ -2,7 +2,7 @@
 <div class="column-full">
   <div class="space">
     <h3 class="heading-medium">
-      {{ space.name }}
+      {{ space.name | capitalize }}
       {% if space.access %}<span class="edit-name"><a href="">Edit name</a></span>{% endif %}
     </h3>
   </div>
