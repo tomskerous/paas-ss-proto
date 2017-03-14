@@ -64,10 +64,13 @@ def space(space=""):
 @ss.route('/apps/')
 @ss.route('/apps/<appname>')
 def app_details(appname=""):
-  pathtodata = 'app/data/' + appname + '/.json'
+  pathtodata = 'app/data/papps.json'
   paas_app = {'name': appname}
   if os.path.isfile( pathtodata ):
-    with open('app/data/org.json') as data_file:
-      paas_app = json.load( data_file )
+    with open( pathtodata ) as data_file:
+      paas_apps = json.load( data_file )
+    for papp in paas_apps["papps"]:
+      if( papp["name"] == appname ):
+        paas_app = papp
 
   return render_template('app_details_page.html', paas_app=paas_app)

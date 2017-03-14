@@ -1,0 +1,11 @@
+{
+  "papps": [
+    {
+      "name": "ags-proto",
+      "space": "Sandbox",
+      "running": true,
+      "last_deploy": "08-03-17 12:34",
+      "instances": "1/1"
+    }
+  ]
+}

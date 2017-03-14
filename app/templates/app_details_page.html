@@ -34,5 +34,9 @@
     {{ paas_app.name }}
   </h1>
 
+  {{ paas_app.last_deploy }}
+
+  <p>Instances: {{ paas_app.instances }}</p>
+
 </main>
 {% endblock %}
