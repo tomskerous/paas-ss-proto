@@ -17,5 +17,8 @@
   <p><a href="{{ url_for('ss.space', space=space.name) }}">Manage access</a></p>
 </div>
 {% else %}
+<div class="column-full">
+  <p class="panel panel-warning text">You do not have access to this space. If you need access contact one of the space managers.</p>
+</div>
 {% endif %}
 {% endmacro %}

@@ -68,6 +68,9 @@ code {
   p:last-child {
     margin-top: $gutter;
   }
+  .column-full > .panel {
+    margin-top: 5px;
+  }
 }
 
 .space {
@@ -147,4 +150,11 @@ code {
 
 .account-form {
   margin-top: $gutter;
+}
+
+.panel {
+  &-error { border-color: $error-colour; }
+  &-warning { 
+    border-color: $yellow;
+    background: lighten($yellow, 30);}
 }
