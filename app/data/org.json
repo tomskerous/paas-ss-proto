@@ -9,5 +9,25 @@
       "name": "Peter Chamberlin",
       "email": "peter.chamberlin@digital.cabinet-office.gov.uk"
     }
+  ],
+  "spaces": [
+    {
+      "name": "Sandbox",
+      "access": true,
+      "no_of_apps": 4,
+      "no_of_members": 4
+    },
+    {
+      "name": "Preview",
+      "access": true,
+      "no_of_apps": 3,
+      "no_of_members": 7
+    },
+    {
+      "name": "Production",
+      "access": false,
+      "no_of_apps": 4,
+      "no_of_members": 4
+    }
   ]
 }

@@ -53,39 +53,11 @@
       <a href="{{ url_for('ss.create_space') }}" class="action-link">Create new space</a>
     </div>
 
-    <div class="column-full">
-      <div class="space">
-        <h3 class="heading-medium">
-          Sandbox
-          <span class="edit-name"><a href="">Edit name</a></span>
-        </h3>
-      </div>
-    </div>
-    <div class="column-half apps-list">
-      <p>There are 4 apps hosted in this space.</p>
-      <p><a href="{{ url_for('ss.space', space='sandbox') }}">Manage apps</a></p>
-    </div>
-    <div class="column-half">
-      <p>There are 4 people with access to this space.</p>
-      <p><a href="{{ url_for('ss.space', space='sandbox') }}">Manage access</a></p>
-    </div>
+    {% from "partial/account_overview/space.html" import space_listing %}
 
-    <div class="column-full">
-      <div class="space">
-        <h3 class="heading-medium">
-          Production
-          <span class="edit-name"><a href="">Edit name</a></span>
-        </h3>
-      </div>
-    </div>
-    <div class="column-half apps-list">
-      <p>There are 3 apps hosted in this space.</p>
-      <p><a href="{{ url_for('ss.space', space='production') }}">Manage apps</a></p>
-    </div>
-    <div class="column-half">
-      <p>There are 12 people with access to this space.</p>
-      <p><a href="{{ url_for('ss.space', space='production') }}">Manage access</a></p>
-    </div>
+    {% for space in org.spaces %}
+    {{ space_listing( space ) }}
+    {% endfor %}
 
     <div class="column-full">
       <p><a href="https://docs.cloud.service.gov.uk/#spaces">Read more about Spaces</a></p>
