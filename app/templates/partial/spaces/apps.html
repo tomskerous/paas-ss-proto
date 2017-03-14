@@ -1,0 +1,16 @@
+{% macro paas_app_listing(papp) %}
+    <li class="space-list-item {% if papp.error %}space-list-item__error{% endif %}">
+      <h3 class="user-name"><span class="highlight">{{ papp.name }}</span>&ensp;<a href="https://ags-proto.cloudapps.digital">https://{{ papp.name }}.cloudapps.digital</a></h3>
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          Last deploy: {{ papp.last_deploy }}
+        </div>
+        <div class="column-third">
+          <a href="{{ url_for('ss.app_details', appname=papp.name) }}">View more details</a>
+        </div>
+      </div>
+      {% if papp.error %}
+      <p class="error-msg">{{ papp.error_msg }}</p>
+      {% endif %}
+    </li>
+{% endmacro %}

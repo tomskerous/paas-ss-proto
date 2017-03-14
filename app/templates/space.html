@@ -65,51 +65,13 @@
     </div>
 
     <ul class="space-list">
-      <li class="space-list-item">
-        <h3 class="user-name"><span class="highlight">ags-proto</span>&ensp;<a href="https://ags-proto.cloudapps.digital">https://ags-proto.cloudapps.digital</a></h3>
-        <div class="grid-row">
-          <div class="column-two-thirds">
-            Last deploy: 08-03-17 12:34
-          </div>
-          <div class="column-third">
-            <a href="{{ url_for('ss.app_details', appname='ags-proto') }}">View more details</a>
-          </div>
-        </div>
-      </li>
-      <li class="space-list-item">
-        <h3 class="user-name"><span class="highlight">gateway</span>&ensp;<a href="https://ags-proto.cloudapps.digital">https://gateway.cloudapps.digital</a></h3>
-        <div class="grid-row">
-          <div class="column-two-thirds">
-            Last deploy: 23-02-17 14:29
-          </div>
-          <div class="column-third">
-            <a href="{{ url_for('ss.app_details', appname='gateway') }}">View more details</a>
-          </div>
-        </div>
-      </li>
-      <li class="space-list-item space-list-item__error">
-        <h3 class="user-name"><span class="highlight">oidc-client</span>&ensp;<a href="https://ags-proto.cloudapps.digital">https://oidc-client.cloudapps.digital</a></h3>
-        <div class="grid-row">
-          <div class="column-two-thirds">
-            Last deploy: 17-02-17 17:31
-          </div>
-          <div class="column-third">
-            <a href="{{ url_for('ss.app_details', appname='oidc-client') }}">View more details</a>
-          </div>
-        </div>
-        <p class="error-msg">This app is down.</p>
-      </li>
-      <li class="space-list-item">
-        <h3 class="user-name"><span class="highlight">keycloak</span>&ensp;<a href="https://ags-proto.cloudapps.digital">https://keycloak.cloudapps.digital</a></h3>
-        <div class="grid-row">
-          <div class="column-two-thirds">
-            Last deploy: 23-01-17 11:14
-          </div>
-          <div class="column-third">
-            <a href="{{ url_for('ss.app_details', appname='keycloak') }}">View more details</a>
-          </div>
-        </div>
-      </li>
+
+      {% from "partial/spaces/apps.html" import paas_app_listing %}
+
+      {% for papp in space.apps %}
+      {{ paas_app_listing(papp) }}
+      {% endfor %}
+
     </ul>
     <p><a href="https://docs.cloud.service.gov.uk/#managing-apps">Find out more about apps on PaaS</a>.</p>
   </section>

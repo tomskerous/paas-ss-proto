@@ -24,5 +24,28 @@
       "role": "Space developer",
       "last_active": "06-03-17"
     }
+  ],
+  "apps": [
+    {
+      "name": "ags-proto",
+      "last_deploy": "08-03-17 12:34",
+      "error": false
+    },
+    {
+      "name": "gateway",
+      "last_deploy": "23-02-17 14:29",
+      "error": false
+    },
+    {
+      "name": "oidc-client",
+      "last_deploy": "17-02-17 17:31",
+      "error": true,
+      "error_msg": "This app is down"
+    },
+    {
+      "name": "keycloak",
+      "last_deploy": "23-01-17 11:14",
+      "error": false
+    }
   ]
 }
