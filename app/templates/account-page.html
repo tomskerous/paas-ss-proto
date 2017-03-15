@@ -29,11 +29,11 @@
       Organisation
     </h2>
     <p class="text">Your account belongs to at least one organisation within PaaS. This typically represents the real-world organisation, department or team you work for.</p>
-    <p class="lede">You belong to the <span class="highlight">{{ org.name }}</span> organisation.</p>
+    <p class="lede">You belong to the <span class="highlight">{{ ORG.name }}</span> organisation.</p>
     <h4 class="heading-small">Org managers</h4>
     <table>
       <tbody>
-        {% for mgr in org.managers %}
+        {% for mgr in ORG.managers %}
         <tr>
           <td>{{ mgr.name }}</td>
           <td>{{ mgr.email }}</td>
@@ -55,7 +55,7 @@
 
     {% from "partial/account_overview/space.html" import space_listing %}
 
-    {% for space in org.spaces %}
+    {% for space in ORG.spaces %}
     {{ space_listing( space ) }}
     {% endfor %}
 

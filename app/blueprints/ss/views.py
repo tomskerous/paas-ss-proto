@@ -20,9 +20,7 @@ def two_fa():
 
 @ss.route('/account')
 def account():
-  with open('app/data/org.json') as data_file:
-      org = json.load( data_file )
-  return render_template('account-page.html', org=org)
+  return render_template('account-page.html')
 
 @ss.route('/request-account')
 def request_account():

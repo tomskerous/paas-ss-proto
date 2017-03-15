@@ -14,7 +14,7 @@
       <a href="{{ url_for('base.product_page') }}" itemprop="item"><span itemprop="name">GOV.UK PaaS</span></a>
     </li>
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-      <a href="{{ url_for('ss.account') }}" itemprop="item"><span itemprop="name">{{ paas_app.org_name|default('csd-sso') }}</span></a>
+      <a href="{{ url_for('ss.account') }}" itemprop="item"><span itemprop="name">{{ ORG.name }}</span></a>
     </li>
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
       <a href="{{ url_for('ss.space') }}" itemprop="item"><span itemprop="name">{{ paas_app.space_name|default('Sandbox') }}</span></a>

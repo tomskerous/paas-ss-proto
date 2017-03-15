@@ -4,6 +4,7 @@ Flask app factory class
 """
 
 import os
+import json
 
 from flask import Flask, render_template, session
 
@@ -42,7 +43,16 @@ def register_context_processors(app):
       return {
           'asset_path': '/static/govuk_template/assets/'}
 
+    """
+    Provide org details to all templates
+    """
+    def org_context_processor():
+      with open('app/data/org.json') as data_file:
+        org = json.load( data_file )
+      return org
+
     app.context_processor(base_context_processor)
+    app.context_processor(org_context_processor)
 
 def register_extensions(app):
     """

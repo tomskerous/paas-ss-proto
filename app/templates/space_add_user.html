@@ -14,7 +14,7 @@
       <a href="{{ url_for('base.product_page') }}" itemprop="item"><span itemprop="name">GOV.UK PaaS</span></a>
     </li>
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-      <a href="{{ url_for('ss.account') }}" itemprop="item"><span itemprop="name">csd-sso</span></a>
+      <a href="{{ url_for('ss.account') }}" itemprop="item"><span itemprop="name">{{ ORG.name }}</span></a>
     </li>
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
       <a href="{{ url_for('ss.space') }}" itemprop="item"><span itemprop="name">sandbox</span></a>
@@ -69,7 +69,7 @@
   <div class="documentation-section text">
     <p>To grant access to a space to another account, run:</p>
 
-    <p><code>cf set-space-role USERNAME csd-sso sandbox ROLE</code></p>
+    <p><code>cf set-space-role USERNAME {{ ORG.name }} sandbox ROLE</code></p>
 
     <p>The USERNAME is the email address the user logs in with when using the command line client.</p>
     
