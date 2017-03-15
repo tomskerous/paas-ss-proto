@@ -7,7 +7,34 @@
       "last_deploy": "08-03-17 12:34",
       "instances": "1/1",
       "disk": "1Gb",
+      "memory": "128M"
+    },
+    {
+      "name": "gateway",
+      "space": "Sandbox",
+      "running": true,
+      "last_deploy": "23-02-17 14:29",
+      "instances": "1/1",
+      "disk": "1Gb",
       "memory": "64M"
+    },
+    {
+      "name": "oidc-client",
+      "space": "Sandbox",
+      "running": false,
+      "last_deploy": "17-02-17 17:31",
+      "instances": "1/1",
+      "disk": "1Gb",
+      "memory": "512M"
+    },
+    {
+      "name": "keycloak",
+      "space": "Sandbox",
+      "running": true,
+      "last_deploy": "23-01-17 11:14",
+      "instances": "1/1",
+      "disk": "1Gb",
+      "memory": "1G"
     }
   ]
 }
