@@ -17,7 +17,7 @@
       <a href="{{ url_for('ss.account') }}" itemprop="item"><span itemprop="name">{{ ORG.name }}</span></a>
     </li>
     <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-      <a href="{{ url_for('ss.space') }}" itemprop="item"><span itemprop="name">{{ paas_app.space_name|default('Sandbox') }}</span></a>
+      <a href="{{ url_for('ss.space', space=paas_app.space) }}" itemprop="item"><span itemprop="name">{{ paas_app.space | default('Sandbox') | capitalize  }}</span></a>
     </li>
     <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
       <a href="#main" itemprop="item"><span itemprop="name">{{ paas_app.name|default('testapp') }}</span></a>
@@ -30,7 +30,7 @@
 <main id="content" role="main">
 
   <h1 class="heading-large">
-    <span class="heading-secondary">{{ paas_app.space_name|default('Sandbox') }}</span>
+    <span class="heading-secondary">{{ paas_app.space | default('Sandbox') | capitalize }}</span>
     {{ paas_app.name }}
   </h1>
 
