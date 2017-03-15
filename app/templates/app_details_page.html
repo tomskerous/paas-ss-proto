@@ -62,5 +62,24 @@
 
   <p><a href="https://paas-tech-docs.cloudapps.digital/#deployment-overview">Find out more about deploying on the PaaS</a></p>
 
+  <h2 class="heading-medium">Alerts</h2>
+
+  <p>The app has the following alerts set up:</p>
+
+  {% if paas_app.alerts.setup %}
+
+  <dl class="definition-inline definition-inline--inverse">
+    <dt>Deployments</dt>
+    <dd>{{ paas_app.alerts.deployments }}</dd>
+    <dt>App goes down</dt>
+    <dd>{{ paas_app.alerts.goesdown }}</dd>
+  </dl>
+
+  {% else %}
+
+  <p class="panel panel-warning text">Currently there are no alerts set up to monitor this app. <a href="">Would you like to set up alerts?</a></p>
+
+  {% endif %}
+
 </main>
 {% endblock %}
