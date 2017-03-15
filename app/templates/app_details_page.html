@@ -34,9 +34,20 @@
     {{ paas_app.name }}
   </h1>
 
-  {{ paas_app.last_deploy }}
+  <h2 class="heading-medium">App details</h2>
 
-  <p>Instances: {{ paas_app.instances }}</p>
+  <dl class="definition-inline definition-inline--inverse">
+    <dt>Name</dt>
+    <dd>{{ paas_app.name }}</dd>
+    <dt>Instances</dt>
+    <dd>{{ paas_app.instances }}</dd>
+    <dt>Memory</dt>
+    <dd>{{ paas_app.memory }}</dd>
+    <dt>Disk</dt>
+    <dd>{{ paas_app.disk }}</dd>
+    <dt>URL</dt>
+    <dd><a href="http://{{ paas_app.name }}.cloudapps.digital">{{ paas_app.name }}.cloudapps.digital</a></dd>
+  </dl>
 
 </main>
 {% endblock %}
