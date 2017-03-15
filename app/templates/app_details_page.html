@@ -49,5 +49,18 @@
     <dd><a href="http://{{ paas_app.name }}.cloudapps.digital">{{ paas_app.name }}.cloudapps.digital</a></dd>
   </dl>
 
+  <h2 class="heading-medium">Deployments</h2>
+
+  <dl class="definition-inline definition-inline--inverse">
+    <dt>Last deploy</dt>
+    <dd>{{ paas_app.last_deploy }}</dd>
+    <dt>Deployed by</dt>
+    <dd>{{ paas_app.deployed_by }}</dd>
+    <dt>Deploy logs</dt>
+    <dd><a href="">View last deploy logs</a></dd>
+  </dl>
+
+  <p><a href="https://paas-tech-docs.cloudapps.digital/#deployment-overview">Find out more about deploying on the PaaS</a></p>
+
 </main>
 {% endblock %}
