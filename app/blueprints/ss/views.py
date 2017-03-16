@@ -63,7 +63,7 @@ def space(space=""):
 @ss.route('/apps/<appname>')
 def app_details(appname=""):
   pathtodata = 'app/data/papps.json'
-  paas_app = {'name': appname}
+  paas_app = { 'name': appname }
   if os.path.isfile( pathtodata ):
     with open( pathtodata ) as data_file:
       paas_apps = json.load( data_file )
