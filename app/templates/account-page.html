@@ -28,7 +28,6 @@
       <span class="heading-secondary">Your PaaS account</span>
       Organisation
     </h2>
-    <p class="text">Your account belongs to at least one organisation within PaaS. This typically represents the real-world organisation, department or team you work for.</p>
     <p class="lede">You belong to the <span class="highlight">{{ ORG.name }}</span> organisation.</p>
     <h4 class="heading-small">Org managers</h4>
     <table>
@@ -42,13 +41,20 @@
         {% endfor %}
       </tbody>
     </table>
-    <p><a href="https://docs.cloud.service.gov.uk/#organisations">Read more about Organisations</a></p>
+
+    <details class="secondary-info">
+      <summary>What are organisations?</summary>
+      <div class="text secondary-info_content">
+        <p>Your account belongs to at least one organisation within PaaS. This typically represents the real-world organisation, department or team you work for.</p>
+        <p><a href="https://docs.cloud.service.gov.uk/#organisations">Read more about Organisations.</a></p>
+      </div>
+    </details>
   </section>
 
   <section class="dashboard-section grid-row">
     <div class="column-full">
       <h2 class="heading-large">Spaces</h2>
-      <p class="text">Each organisation is divided into one or more spaces, which are used to organise app development, deployment, and maintenance.</p>
+
       <p class="lede">2 spaces available</p>
       <a href="{{ url_for('ss.create_space') }}" class="action-link">Create new space</a>
     </div>
@@ -59,9 +65,14 @@
     {{ space_listing( space ) }}
     {% endfor %}
 
-    <div class="column-full">
-      <p><a href="https://docs.cloud.service.gov.uk/#spaces">Read more about Spaces</a></p>
-    </div>
+    <details class="secondary-info column-full">
+      <summary>What are spaces?</summary>
+      <div class="text secondary-info_content">
+        <p>Each organisation is divided into one or more spaces, which are used to organise app development, deployment, and maintenance.</p>
+        <p><a href="https://docs.cloud.service.gov.uk/#spaces">Read more about Spaces</a></p>
+      </div>
+    </details>
+
   </section>
 
 <!-- ORG MANAGER

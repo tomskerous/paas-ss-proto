@@ -160,3 +160,12 @@ code {
     background: lighten($yellow, 30);}
 }
 
+.secondary-info {
+  margin: $gutter 0;
+
+  &_content {
+    border-left: 4px solid $border-colour;
+    margin-left: 4px;
+    padding: 5px 0 5px 15px;
+  }
+}
