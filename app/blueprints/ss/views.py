@@ -72,3 +72,7 @@ def app_details(appname=""):
         paas_app = papp
 
   return render_template('app_details_page.html', paas_app=paas_app)
+
+@ss.route('/user/info')
+def user_info():
+  return render_template('user-info.html')
