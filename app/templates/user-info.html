@@ -22,9 +22,10 @@
 
 {% block content %}
 <main id="content" role="main">
+  <h1 class="heading-large">My profile</h1>
+
 <div class="grid-row">
   <div class="column-two-thirds">
-    <h1 class="heading-large">My profile</h1>
 
     <table class="user-info-table">
       <tbody>
@@ -45,8 +46,8 @@
         </tr>
         <tr>
           <td>Spaces:</td>
-          <td>Sandbox (Space manager) 
-            <span class="space-list-profile">Preview (Space developer)</span>
+          <td><a href="{{ url_for('ss.space', space='sandbox') }}">Sandbox</a> (Space manager) 
+            <span class="space-list-profile"><a href="{{ url_for('ss.space', space='preview') }}">Preview</a> (Space developer)</span>
           </td>
           <td></td>
         </tr>
@@ -67,6 +68,11 @@
         </tr>
       </tbody>
     </table>
+  </div>
+  <div class="column-one-third">
+    <div class="profile-aside">
+      <p>You cannot give yourself access to a space you are not the space manager for. If you need access to a space contact the respective space manager.</p>
+    </div>
   </div>
 </div>
 </main>
