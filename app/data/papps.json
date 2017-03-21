@@ -10,6 +10,7 @@
       "instances": "1/1",
       "disk": "1Gb",
       "memory": "128M",
+      "cost": 0.80,
       "alerts": {
         "setup": true,
         "deployments": "all members",
@@ -26,6 +27,7 @@
       "instances": "1/1",
       "disk": "1Gb",
       "memory": "64M",
+      "cost": 0.40,
       "alerts": {
         "setup": true,
         "deployments": "all members",
@@ -42,6 +44,7 @@
       "instances": "1/1",
       "disk": "1Gb",
       "memory": "512M",
+      "cost": 3.22,
       "alerts": {
         "setup": false
       }
@@ -56,6 +59,7 @@
       "instances": "1/1",
       "disk": "1Gb",
       "memory": "1G",
+      "cost": 6.43,
       "alerts": {
         "setup": false
       }
@@ -70,6 +74,7 @@
       "instances": "1/1",
       "disk": "1Gb",
       "memory": "1G",
+      "cost": 6.43,
       "alerts": {
         "setup": true,
         "deployments": "all members",
@@ -86,6 +91,7 @@
       "instances": "1/1",
       "disk": "1Gb",
       "memory": "512Mb",
+      "cost": 3.22,
       "alerts": {
         "setup": true,
         "deployments": "all members",
