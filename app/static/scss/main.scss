@@ -154,7 +154,11 @@ code {
 }
 
 .panel {
-  &-error { border-color: $error-colour; }
+  &-error { 
+    border-color: $error-colour;
+    color: $error-colour;
+    font-weight: 700;
+    background: lighten($error-colour, 55); }
   &-warning { 
     border-color: $yellow;
     background: lighten($yellow, 30);}

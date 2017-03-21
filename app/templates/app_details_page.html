@@ -34,6 +34,10 @@
     {{ paas_app.name }}
   </h1>
 
+  {% if not paas_app.running %}
+  <p class="panel panel-error text">This app is not running. It has been down since 13-03-2017.</p>
+  {% endif %}
+
   <h2 class="heading-medium">App details</h2>
 
   {% if not paas_app.data_fetched %}
