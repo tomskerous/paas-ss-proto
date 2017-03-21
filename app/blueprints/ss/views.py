@@ -52,7 +52,9 @@ def create_service():
 @ss.route('/spaces/<space>')
 def space(space=""):
   pathtodata = 'app/data/spaces/' + space.lower() + '.json'
-  space = { 'name': space }
+  space = { 
+    'name': space,
+    'data_fetched': False }
   if os.path.isfile( pathtodata ):
     with open( pathtodata ) as data_file:
       space = json.load( data_file )

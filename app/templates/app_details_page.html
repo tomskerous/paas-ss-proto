@@ -36,6 +36,11 @@
 
   <h2 class="heading-medium">App details</h2>
 
+  {% if not paas_app.data_fetched %}
+  <p class="panel panel-warning text">Unable to fetch app details at this time. Try again later or try on the commandline.</p>
+  {% else %}
+  
+
   <dl class="definition-inline definition-inline--inverse">
     <dt>Name</dt>
     <dd>{{ paas_app.name }}</dd>
@@ -66,7 +71,7 @@
 
   <p>The app has the following alerts set up:</p>
 
-  {% if paas_app.alerts.setup %}
+  {% if paas_app.alerts and paas_app.alerts.setup %}
 
   <dl class="definition-inline definition-inline--inverse">
     <dt>Deployments</dt>
@@ -80,6 +85,15 @@
   <p class="panel panel-warning text">Currently there are no alerts set up to monitor this app. <a href="">Would you like to set up alerts?</a></p>
 
   {% endif %}
+  {% endif %}
+
+  <section class="documentation-section">
+    <h3 class="heading-medium">On the commandline</h3>
+    <p>You can also view the same information on the commandline, to see details for all of your apps use:</p>
+    <p><code>cf apps</code></p>
+
+    <p><a href="https://docs.cloud.service.gov.uk/#quick-setup-guide">Read more about using PaaS on the commandline.</a></p>
+  </section>
 
 </main>
 {% endblock %}
