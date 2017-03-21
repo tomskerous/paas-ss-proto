@@ -48,18 +48,27 @@
     {
       "name": "ags-proto-test",
       "last_deploy": "08-03-17 12:34",
-      "error": false
+      "error": false,
+      "instances": "1/1",
+      "disk": "1Gb",
+      "memory": "1G"
     },
     {
       "name": "blue-badge-v1",
       "last_deploy": "17-12-16 17:31",
       "error": true,
-      "error_msg": "This app is down"
+      "error_msg": "This app is down",
+      "instances": "1/1",
+      "disk": "1Gb",
+      "memory": "512Mb"
     },
     {
       "name": "paas-test",
       "last_deploy": "23-01-17 11:14",
-      "error": false
+      "error": false,
+      "instances": "2/2",
+      "disk": "2Gb",
+      "memory": "512Mb"
     }
   ]
 }

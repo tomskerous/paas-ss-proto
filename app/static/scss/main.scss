@@ -109,6 +109,10 @@ code {
   border-top: 1px solid $border-colour;
   padding: 8px 0 5px;
 
+  &__app {
+    border-top: 2px solid $border-colour;
+  }
+
   &:last-child {
     border-bottom: 1px solid $border-colour;
   }
@@ -186,4 +190,20 @@ code {
 .space-list-profile {
   display: list-item;
   list-style: none;
+}
+
+.app-info-table {
+  margin-top: 5px;
+  td {
+    border-bottom: 0;
+    border-right: 1px solid $border-colour;
+    padding: 5px 0 5px 10px;
+
+    &:last-child {
+      border-right: 0;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+  }
 }

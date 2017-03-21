@@ -30,23 +30,35 @@
     {
       "name": "ags-proto",
       "last_deploy": "08-03-17 12:34",
-      "error": false
+      "error": false,
+      "instances": "1/1",
+      "disk": "1Gb",
+      "memory": "128M"
     },
     {
       "name": "gateway",
       "last_deploy": "23-02-17 14:29",
-      "error": false
+      "error": false,
+      "instances": "1/1",
+      "disk": "1Gb",
+      "memory": "64M"
     },
     {
       "name": "oidc-client",
       "last_deploy": "17-02-17 17:31",
       "error": true,
-      "error_msg": "This app is down"
+      "error_msg": "This app is down",
+      "instances": "1/1",
+      "disk": "1Gb",
+      "memory": "512M"
     },
     {
       "name": "keycloak",
       "last_deploy": "23-01-17 11:14",
-      "error": false
+      "error": false,
+      "instances": "1/1",
+      "disk": "1Gb",
+      "memory": "1G"
     }
   ]
 }
