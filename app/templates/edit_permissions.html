@@ -1,0 +1,80 @@
+{% extends "layout-paas.html" %}
+
+{% block page_title %}Sample page - Flask prototyping{% endblock %}
+
+{% block header_nav %}
+  {% set username = "Colm Britton" %}
+  {% include "partial/signed-in-top-nav.html" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a href="{{ url_for('base.product_page') }}" itemprop="item"><span itemprop="name">GOV.UK PaaS</span></a>
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a href="{{ url_for('ss.account') }}" itemprop="item"><span itemprop="name">{{ ORG.name }}</span></a>
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a href="{{ url_for('ss.space') }}" itemprop="item"><span itemprop="name">{{ space }}</span></a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">Add user</span></a>
+    </li>
+  </ol>
+</nav>
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <h1 class="heading-large">
+    <span class="heading-secondary">{{ space | capitalize }}</span>
+    Change user permissions
+  </h1>
+
+  <form method="post" class="form">
+
+    <div class="form-group">
+      <label class="form-label" for="email_address">
+        Name
+      </label>
+      <p class="lede highlight">{{ username }}</p>
+    </div>
+
+    <fieldset class="form-group">
+      <legend class="form-label">
+        Role
+      </legend>
+
+      <label class="block-label selection-button-radio" for="space_manager">
+        <input id="space_manager" name="space_role" type="radio" value="y" >
+          Space_manager
+      </label>
+
+      <label class="block-label selection-button-radio" for="space_developer">
+        <input id="space_developer" name="space_role" type="radio" value="y" >
+        Space developer
+      </label>
+
+  </fieldset>
+
+  <div class="form-group">
+    <input type="submit" class="button" value="Add user">
+  </div>
+
+  </form>
+
+  <div class="documentation-section text">
+    <p>To grant access to a space to another account, run:</p>
+
+    <p><code>cf set-space-role {{ username }} {{ ORG.name }} {{ space }} ROLE</code></p>
+
+    <p>The ROLE is the role you'd like the user to have.</p>
+
+    <p><a href="https://paas-tech-docs.cloudapps.digital/#managing-users">Find out more about <span class="highlight">managing users</span>.</a></p>
+  </div>
+
+</main>
+{% endblock %}

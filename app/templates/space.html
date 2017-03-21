@@ -48,7 +48,7 @@
       {% from "partial/spaces/user.html" import user_listing %}
 
       {% for user in space.users %}
-      {{ user_listing(user) }}
+      {{ user_listing(user, space.name) }}
       {% endfor %}
 
     </ul>

@@ -61,6 +61,10 @@ def space(space=""):
 
   return render_template('space.html', space=space)
 
+@ss.route('/spaces/<space>/user/<user>/edit')
+def edit_permissions(space="", user=""):
+  return render_template('edit_permissions.html', space=space, username=user)
+
 @ss.route('/apps/')
 @ss.route('/apps/<appname>')
 def app_details(appname=""):
