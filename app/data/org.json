@@ -1,14 +1,14 @@
 {
   "ORG": {
-    "name": "GOVUK-Notify",
+    "name": "DWP-Carers-Allowance-service",
     "managers": [
       {
         "name": "Andy Driver",
-        "email": "andy.driver@digital.cabinet-office.gov.uk"
+        "email": "andy.driver@digital.dwp.gov.uk"
       },
       {
         "name": "Peter Chamberlin",
-        "email": "peter.chamberlin@digital.cabinet-office.gov.uk"
+        "email": "peter.chamberlin@digital.dwp.gov.uk"
       }
     ],
     "spaces": [
