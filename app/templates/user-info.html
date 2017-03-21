@@ -19,3 +19,55 @@
   </ol>
 </nav>
 {% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <h1 class="heading-large">My profile</h1>
+
+    <table class="user-info-table">
+      <tbody>
+        <tr>
+          <td>Name:</td>
+          <td>John Smith</td>
+          <td><a href="edit-name">Change</a></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td>john.smith@email.gov.uk</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Organisation:</td>
+          <td>{{ ORG.name }}</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Spaces:</td>
+          <td>Sandbox (Space manager) 
+            <span class="space-list-profile">Preview (Space developer)</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Joined date:</td>
+          <td>8 Sep 2016 – 11:14:22</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Mobile number:</td>
+          <td>+447769897329</td>
+          <td><a href="edit-mobile-number">Change</a></td>			
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td>Last changed 12 February at 10:39am</td>
+          <td><a href="edit-password">Change</a></td>			
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</main>
+{% endblock %}
