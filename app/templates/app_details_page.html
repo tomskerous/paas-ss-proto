@@ -38,27 +38,37 @@
   <p class="panel panel-error text">This app is not running. It has been down since 13-03-2017.</p>
   {% endif %}
 
-  <h2 class="heading-medium">App details</h2>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">App details</h2>
+      
+      {% if not paas_app.data_fetched %}
+      <p class="panel panel-warning text">Unable to fetch app details at this time. Try again later or try on the commandline.</p>
+      {% else %}
 
-  {% if not paas_app.data_fetched %}
-  <p class="panel panel-warning text">Unable to fetch app details at this time. Try again later or try on the commandline.</p>
-  {% else %}
-  
 
-  <dl class="definition-inline definition-inline--inverse">
-    <dt>Name</dt>
-    <dd>{{ paas_app.name }}</dd>
-    <dt>Instances</dt>
-    <dd>{{ paas_app.instances }}</dd>
-    <dt>Memory</dt>
-    <dd>{{ paas_app.memory }}</dd>
-    <dt>Disk</dt>
-    <dd>{{ paas_app.disk }}</dd>
-    <dt>Cost per instance</dt>
-    <dd>£{{ paas_app.cost }} per month (<a href="">see total bill</a>)</dd>
-    <dt>URL</dt>
-    <dd><a href="http://{{ paas_app.name }}.cloudapps.digital">{{ paas_app.name }}.cloudapps.digital</a></dd>
-  </dl>
+      <dl class="definition-inline definition-inline--inverse">
+        <dt>Name</dt>
+        <dd>{{ paas_app.name }}</dd>
+        <dt>Instances</dt>
+        <dd>{{ paas_app.instances }}</dd>
+        <dt>Memory</dt>
+        <dd>{{ paas_app.memory }}</dd>
+        <dt>Disk</dt>
+        <dd>{{ paas_app.disk }}</dd>
+        <dt>Cost per instance</dt>
+        <dd>£{{ paas_app.cost }} per month (<a href="">see total bill</a>)</dd>
+        <dt>URL</dt>
+        <dd><a href="http://{{ paas_app.name }}.cloudapps.digital">{{ paas_app.name }}.cloudapps.digital</a></dd>
+      </dl>
+    </div>
+    <div class="column-third">
+      <aside class="app-details-aside">
+        <h3 class="heading-medium">Is your app production ready?</h3>
+        <a href="https://paas-tech-docs.cloudapps.digital/#production-checklist">How to make your app production ready documentation</a>
+      </aside>
+    </div>
+  </div>
 
   <h2 class="heading-medium">Deployments</h2>
 

@@ -187,6 +187,16 @@ code {
   padding-top: $gutter-half;
 }
 
+.app-details-aside {
+  border-top: 10px solid $link-colour;
+  margin-top: 45px;
+  padding-top: $gutter;
+
+  .heading-medium {
+    margin-top: 0;
+  }
+}
+
 .space-list-profile {
   display: list-item;
   list-style: none;
