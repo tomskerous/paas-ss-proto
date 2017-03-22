@@ -10,11 +10,11 @@
 {% if space.access %}
 <div class="column-half apps-list">
   <p>There are {{ space.no_of_apps }} apps hosted in this space.</p>
-  <p><a href="{{ url_for('ss.space', space=space.name) }}">Manage apps</a></p>
+  <p><a href="{{ url_for('ss.space', space=space.name, _anchor='space-apps') }}">Manage apps</a></p>
 </div>
 <div class="column-half">
   <p>There are {{ space.no_of_members }} people with access to this space.</p>
-  <p><a href="{{ url_for('ss.space', space=space.name) }}">Manage access</a></p>
+  <p><a href="{{ url_for('ss.space', space=space.name, _anchor='space-users') }}">Manage access</a></p>
 </div>
 {% else %}
 <div class="column-full">
