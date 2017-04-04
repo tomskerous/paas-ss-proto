@@ -111,3 +111,6 @@ environment.sh
 
 # screenshots
 /screenshots
+
+# tmp
+/tmp
