@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/previous/page">Back</a>
+
+      <h1 class="heading-large">What storage requirements do you have?</h1>
+
+      <form class="form" action="/survey/check-your-answers" method="post">
+
+        <p>For each of the following please tell us if you think your service needs them.</p>
+
+        <fieldset class="inline form-group">
+          <legend>
+            <span class="form-label-bold">
+              Postgres
+            </span>
+          </legend>
+          <div class="multiple-choice">
+            <input id="radio-inline-1a" type="radio" name="postgres-needed" value="need">
+            <label for="radio-inline-1a">Need</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-inline-2a" type="radio" name="postgres-needed" value="not needed">
+            <label for="radio-inline-2a">Don't need</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-inline-2a" type="radio" name="postgres-needed" value="unsure">
+            <label for="radio-inline-2a">Not sure yet</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="inline form-group">
+          <legend>
+            <span class="form-label-bold">
+              MySQL
+            </span>
+          </legend>
+          <div class="multiple-choice">
+            <input id="radio-inline-1a" type="radio" name="mysql-needed" value="need">
+            <label for="radio-inline-1a">Need</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-inline-2a" type="radio" name="mysql-needed" value="not needed">
+            <label for="radio-inline-2a">Don't need</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-inline-2a" type="radio" name="mysql-needed" value="unsure">
+            <label for="radio-inline-2a">Not sure yet</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="inline form-group">
+          <legend>
+            <span class="form-label-bold">
+              Redis
+            </span>
+          </legend>
+          <div class="multiple-choice">
+            <input id="radio-inline-1a" type="radio" name="redis-needed" value="need">
+            <label for="radio-inline-1a">Need</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-inline-2a" type="radio" name="redis-needed" value="not needed">
+            <label for="radio-inline-2a">Don't need</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-inline-2a" type="radio" name="redis-needed" value="unsure">
+            <label for="radio-inline-2a">Not sure yet</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="inline form-group">
+          <legend>
+            <span class="form-label-bold">
+              MongoDB
+            </span>
+          </legend>
+          <div class="multiple-choice">
+            <input id="radio-inline-1a" type="radio" name="mongodb-needed" value="need">
+            <label for="radio-inline-1a">Need</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-inline-2a" type="radio" name="mongodb-needed" value="not needed">
+            <label for="radio-inline-2a">Don't need</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-inline-2a" type="radio" name="mongodb-needed" value="unsure">
+            <label for="radio-inline-2a">Not sure yet</label>
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+          <a class="skip-link" href="">Skip this question</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
