@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/url/of/next/page">Back</a>
+
+      <h1 class="heading-large">Tell us about your existing service</h1>
+
+      <form class="form" action="/survey/storage-requirements" method="get">
+
+        <fieldset class="inline form-group">
+          <legend>
+            <span class="form-label-bold">
+              At what stage is your service?
+            </span>
+          </legend>
+          <div class="multiple-choice">
+            <input id="radio-inline-1a" type="radio" name="service-status" value="alpha">
+            <label for="radio-inline-1a">alpha</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-inline-2a" type="radio" name="service-status" value="beta">
+            <label for="radio-inline-2a">beta</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-inline-2a" type="radio" name="service-status" value="live">
+            <label for="radio-inline-2a">live</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend>
+            <span class="form-label-bold">
+            Who is your service for?
+            </span>
+          </legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="who-for" value="public">
+            <label for="radio-1">The public</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="who-for" value="internal - all">
+            <label for="radio-2">All internal staff</label>
+          </div>
+          <p class="form-block">or</p>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="who-for" value="internal - limited">
+            <label for="radio-3">Selected internal staff</label>
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+          <a class="skip-link" href="">Skip this question</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
