@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        What will you be using PaaS for?
+      </h1>
+
+      <form class="form">
+
+        <fieldset class="form-group">
+          <legend class="visuallyhidden">What will you be using PaaS for?</legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="purpose-q" value="prototyping">
+            <label for="radio-1">Prototyping</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="purpose-q" value="hosting a service">
+            <label for="radio-2">Hosting a service</label>
+          </div>
+          <p class="form-block">or</p>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="purpose-q" value="other">
+            <label for="radio-3">Other</label>
+          </div>
+          
+        </fieldset>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
