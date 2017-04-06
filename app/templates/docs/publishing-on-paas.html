@@ -1,0 +1,67 @@
+{% extends "layout-paas.html" %}
+
+{% block content %}
+<main id="content" role="main" class="docs markdown">
+	<div class="breadcrumbs">
+	  <ol role="breadcrumbs">
+	    <li><a href="../docs.html">GOV.UK prototype kit</a></li>
+	    <li><a href="tutorials-and-examples.html">Tutorials and examples</a></li>
+	  </ol>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			<h1 id="publishing-on-the-web-heroku-">Publishing on the web (Heroku)</h1>
+<p>We recommend using <a href="http://www.heroku.com">Heroku</a> to get your prototype online. It’s simple and fast to deploy new versions as you work.</p>
+<p>Once your prototype is on Heroku, other people will be able to access and try your prototype from their own computers or mobile devices.</p>
+<blockquote>
+<p><strong>DO NOT</strong> enter real user data in to prototypes hosted on Heroku. If your prototype stores or collects user data, talk to a security professional about appropriate security steps you must take.</p>
+</blockquote>
+<p>A prototype deployed on Heroku is called an <code>app</code> - it will have a url like:
+<code>your-prototype.herokuapp.com</code>.</p>
+<p>You can have multiple apps running on Heroku - projects often have several so they can try different ideas out at once.</p>
+<h2 id="1-set-up-git">1) Set up Git</h2>
+<p>You need to <a href="setting-up-git.html">set up Git</a> on your prototype before you can use Heroku.</p>
+<h2 id="2-sign-up-to-heroku">2) Sign up to Heroku</h2>
+<p>If you’re new to Heroku, <a href="https://signup.heroku.com/">sign up for a free account</a>. When asked what language you use, select <code>node.js</code>.</p>
+<h2 id="3-install-the-heroku-toolbelt">3) Install the Heroku toolbelt</h2>
+<p>Install the <a href="https://toolbelt.heroku.com/">Heroku toolbelt</a>.</p>
+<blockquote>
+<p>On Windows, after downloading the toolbelt you&#39;ll need to run <code>heroku login</code> using the <code>cmd</code> app, as it does not work in Git Bash. Once you&#39;ve logged in, you can return to using Git Bash.</p>
+</blockquote>
+<p>The toolbelt lets you use Heroku through the terminal. You will need to restart the terminal after installing the toolbelt.</p>
+<h2 id="4-choose-a-name-for-your-app">4) Choose a name for your app</h2>
+<p>Think of a name for your app. You need to choose a name that&#39;s unique. The name is used in the url for your prototype. For example the name:</p>
+<p><code>govuk-payments-prototype</code></p>
+<p>will create an app at:</p>
+<p><code>govuk-payments-prototype.herokuapp.com</code>.</p>
+<h2 id="5-create-a-heroku-app">5) Create a Heroku app</h2>
+<p>In the terminal, go to the folder of your prototype and run:</p>
+<pre><code>heroku apps:create [name of your app] --region eu
+</code></pre><p>Replace <code>[name of your app]</code> with your app name from step 4.</p>
+<h2 id="6-set-a-username-and-password">6) Set a username and password</h2>
+<p>Prototypes made with the kit require a username and password when published online. This stops members of the public coming across your prototype by accident.</p>
+<h3 id="to-set-username-and-password-">To set username and password:</h3>
+<pre><code>heroku config:set USERNAME=username_here
+heroku config:set PASSWORD=password_here
+</code></pre><h2 id="7-deploy-your-work">7) Deploy your work</h2>
+<p>Make sure any changes you&#39;ve made to your prototype have been committed to git.</p>
+<p>From your prototype folder:</p>
+<pre><code>git push heroku master
+</code></pre><p>This will push your work to Heroku. Deploying may take a minute or so.</p>
+<h2 id="8-view-your-prototype-on-the-web">8) View your prototype on the web</h2>
+<p>After your work is deployed, you will be able to view it on the web by visiting <code>[name].herokuapp.com</code>.
+You can run <code>heroku open</code> to open your prototype in a browser.</p>
+<blockquote>
+<p>Heroku puts apps to sleep that haven’t been accessed in a while - so if you’ve not visited your prototype for a while it may take a few seconds to open.</p>
+</blockquote>
+
+
+		</div>
+
+	</div>
+	
+</main>
+{% endblock %}
