@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Are you building a new service?
+      </h1>
+
+      <form class="form" action="/survey/about-your-service" method="get">
+
+        <fieldset class="form-group">
+          <legend class="visuallyhidden">Are you building a new service?</legend>
+
+          <div class="multiple-choice">
+            <input id="radio-1" type="radio" name="building-new-service" value="yes">
+            <label for="radio-1">Yes</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="radio-2" type="radio" name="building-new-service" value="no">
+            <label for="radio-2">No - we are looking to move an existing service on to the PaaS</label>
+          </div>
+          <p class="form-block">or</p>
+          <div class="multiple-choice">
+            <input id="radio-3" type="radio" name="building-new-service" value="other">
+            <label for="radio-3">Don't know</label>
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+          <a class="skip-link" href="">Skip this question</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
