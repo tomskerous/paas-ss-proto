@@ -15,7 +15,7 @@ def index():
 def product_page():
   return render_template('paas_product_page.html')
 
-@base.route('/proto-docs')
+@base.route('/docs.html')
 def proto_docs():
   return render_template('docs.html')
 
