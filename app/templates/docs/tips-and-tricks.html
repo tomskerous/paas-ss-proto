@@ -1,0 +1,52 @@
+{% extends "proto-kit-layout.html" %}
+
+{% block content %}
+<main id="content" role="main" class="docs markdown">
+	<div class="breadcrumbs">
+	  <ol role="breadcrumbs">
+	    <li><a href="../docs.html">GOV.UK prototype kit</a></li>
+	    <li><a href="tutorials-and-examples.html">Tutorials and examples</a></li>
+	  </ol>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			<h1 id="tips-and-tricks">Tips and tricks</h1>
+<p>A few useful things to help you get started.</p>
+<h2 id="update-the-service-name">Update the Service name</h2>
+<p>You can change the service name by editing the file &#39;/app/config.js&#39;.</p>
+<pre><code>module.exports = {
+
+  // Service name used in header. Eg: &#39;Renew your passport&#39;
+  serviceName: &quot;Service name goes here&quot;,
+
+};
+</code></pre><h2 id="show-navigation-in-the-header">Show navigation in the header</h2>
+<p>Remove the comments surrounding the unordered list with an ID of proposition links.</p>
+<pre><code>&lt;nav id=&quot;proposition-menu&quot;&gt;
+  &lt;a href=&quot;/&quot; id=&quot;proposition-name&quot;&gt;Service name&lt;/a&gt;
+  &lt;!--
+  &lt;ul id=&quot;proposition-links&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;url-to-page-1&quot; class=&quot;active&quot;&gt;Navigation item #1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;url-to-page-2&quot;&gt;Navigation item #2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  --&gt;
+&lt;/nav&gt;
+</code></pre><p>An example of this can be seen in the <a href="https://govuk-prototype-kit.herokuapp.com/app/views/examples/question-page.html">question-page.html</a> template.</p>
+<h2 id="add-a-phase-banner">Add a phase banner</h2>
+<p>Include either the alpha or beta phase banner from the <code>app/views/includes/</code> folder.</p>
+<h3 id="how-to-include-an-alpha-banner">How to include an Alpha banner</h3>
+<pre><code>{% include &quot;includes/phase_banner_alpha.html&quot; %}
+</code></pre><h3 id="how-to-include-a-beta-banner">How to include a Beta banner</h3>
+<pre><code>{% include &quot;includes/phase_banner_beta.html&quot; %}
+</code></pre>
+
+		</div>
+
+	</div>
+	
+</main>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "proto-kit-layout.html" %}
+
+{% block content %} 
+
+<main id="content" role="main" class="docs markdown">
+	<div class="breadcrumbs">
+	  <ol role="breadcrumbs">
+	    <li><a href="../docs.html">GOV.UK prototype kit</a></li>
+	    <li><a href="tutorials-and-examples.html">Tutorials and examples</a></li>
+	  </ol>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			<h1 id="writing-css">Writing CSS</h1>
+<p>CSS used in the prototype kit is written in the SCSS syntax of <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#syntax">Sass</a>. </p>
+<h2 id="sass">Sass</h2>
+<p>Sass is an extension of CSS that gives a load of extra features useful in producing CSS for the mass of different devices and browsers. </p>
+<p>SCSS was chosen because you can paste CSS into it without breaking it which is useful for prototyping. Using SCSS means you can also use the <a href="https://github.com/alphagov/govuk_frontend_toolkit">govuk_frontend_toolkit</a> Sass libraries which include styles for colours, typography, cross-browser fixes and other things which are used across GOV.UK.</p>
+<h2 id="writing-code">Writing code</h2>
+<p>You write your Sass in <a href="https://govuk-prototype-kit.herokuapp.com/app/assets/sass">app/assets/sass</a> and the prototype kit will compile it into the CSS used in your page (found in /public/stylesheets). The app watches your files so this will happen automatically.</p>
+<p>There is already a CSS file included to use called <a href="https://govuk-prototype-kit.herokuapp.com/app/assets/sass/application.scss">application.scss</a> which compiles into <a href="../public/stylesheets/application.css">application.css</a>. Note that Sass files are identified by the <code>.scss</code> extension.</p>
+<p>Every time a change happens in <a href="https://govuk-prototype-kit.herokuapp.com/app/assets/sass/application.scss">application.scss</a> it will produce a new version of <a href="../public/stylesheets/application.css">application.css</a>. Make sure to write your css in <a href="https://govuk-prototype-kit.herokuapp.com/app/assets/sass/application.scss">application.scss</a> as anything you put in <a href="../public/stylesheets/application.css">application.css</a> will get overridden.</p>
+<p>Try starting the app and adding some styles to <code>application.scss</code>. If you open <code>application.css</code> you should now see the compiled version of those styles.</p>
+<h2 id="using-the-govuk_frontend_toolkit">Using the govuk_frontend_toolkit</h2>
+<p>You can use the Sass libraries in the <a href="https://github.com/alphagov/govuk_frontend_toolkit">govuk_frontend_toolkit</a> by importing the files from there directly into <code>application.scss</code>.</p>
+<p>If you look at <a href="https://govuk-prototype-kit.herokuapp.com/app/assets/sass/application.scss">application.scss</a> you should see some are already being used.</p>
+<pre><code>@import &#39;_typography&#39;;
+
+....
+
+h1 {
+  @include bold-48;
+</code></pre><p>The line <code>@import &#39;_typography&#39;;</code> makes all the code in <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_typography.scss">_typography.scss</a> available. The <code>h1</code> can therefore be styled in the 48pt bold form of the font by using <code>@include bold-48;</code> to call the <code>bold-48</code> mixin.</p>
+<h2 id="imports">Imports</h2>
+<p>Imports are done from either the toolkit&#39;s <a href="https://github.com/alphagov/govuk_frontend_toolkit/tree/master/stylesheets/">stylesheets</a> folder or the <a href="https://govuk-prototype-kit.herokuapp.com/app/assets/sass">app/assets/sass</a> folder application.scss sits in. The latter means you can create your own partial files to import. </p>
+<p>Note that the convention is to start the name of any partial with an underscore, like those in the toolkit.</p>
+
+
+		</div>
+
+	</div>
+	
+</main>
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "proto-kit-layout.html" %}
+
+{% block content %}
+<main id="content" role="main" class="docs markdown">
+	<div class="breadcrumbs">
+	  <ol role="breadcrumbs">
+	    <li><a href="../docs.html">GOV.UK prototype kit</a></li>
+	    <li><a href="tutorials-and-examples.html">Tutorials and examples</a></li>
+	  </ol>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			<h1 id="setting-up-git-and-doing-your-first-commit">Setting up git and doing your first commit</h1>
+<p>Git helps track changes in code and lets you undo mistakes or identify bugs. It’s also used to collaborate with other people - so you can share your code with other designers and developers on your team (or with other teams!). Git is a type of version control software.</p>
+<p>This guide will walk you through setting up a git repo (repository) and committing your work so that you can publish your prototype on the web.</p>
+<blockquote>
+<p>You don’t <em>have</em> to use Git to use the prototype kit, but it will be really useful if you learn some basics.</p>
+<p>Git is not the same as GitHub. Git stores versions of your work, and lets you collaborate more easily with others. GitHub puts it all online with a nice web interface.</p>
+</blockquote>
+<p>You&#39;ll need to install Git first. Installation instructions for Mac, Windows, and Linux can be found <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">here</a>. Once you&#39;ve done that, read below to get set up.</p>
+<h2 id="1-set-up-git">1) Set up Git</h2>
+<p>Before using Git, it&#39;s best to set it up with your name and email address, this helps other people know who worked on what.</p>
+<p>In terminal:</p>
+<pre><code>git config --global user.name &quot;YOUR NAME&quot;
+git config --global user.email &quot;YOUR EMAIL ADDRESS&quot;
+</code></pre><p>For example,  <code>git config --global user.name &quot;John Smith&quot;</code></p>
+<p>If you have an account on GitHub, use the <em>same</em> email address for both.</p>
+<h2 id="2-initialise-a-git-repo">2) Initialise a Git repo</h2>
+<p>The first time you want to use Git on your prototype, you need to initialise it.</p>
+<p>In your prototype folder:</p>
+<pre><code>git init
+</code></pre><p>This sets up git to track the files in your prototype folder.</p>
+<h2 id="3-check-the-git-status">3) Check the Git status</h2>
+<p>It’s a good idea to run <code>git status</code> frequently. This tells you the current status - for example, if you made changes to files that haven’t been committed.</p>
+<p>In your prototype folder:</p>
+<pre><code>git status
+</code></pre><p>As this is a new git repo, all files in the kit will be listed as having changes.</p>
+<h2 id="4-doing-your-first-commit">4) Doing your first commit</h2>
+<p>There are two stages to committing your changes. The first is to select the specific files with changes you want to commit, called <strong>‘staging’</strong>. The second is to commit all the changes in ‘staging’.</p>
+<h3 id="select-files-you-want-to-commit">Select files you want to commit</h3>
+<p>As this is our first commit, we want to add <strong>all</strong> files to ‘staging’</p>
+<h4 id="adding-all-files-that-have-changes">Adding all files that have changes</h4>
+<p>In terminal:</p>
+<pre><code>git add .
+</code></pre><blockquote>
+<p>In everyday use, you will use a different command to only pick specific files with changes rather than all at once.</p>
+</blockquote>
+<h3 id="check-git-status">Check Git status</h3>
+<p>Run <code>git status</code> to check the files you’ve got in the stage. You will see a list of all the files just added under the heading <code>Changes to be committed</code>.</p>
+<h3 id="commit-the-files-in-staging-">Commit the files in ‘staging’</h3>
+<p>Run:</p>
+<pre><code>git commit -m &quot;First commit&quot;
+</code></pre><p>The message you put in the speech marks should be descriptive of the changes you are committing. This will help in the future if you or someone else needs to look back at your changes and know why you made them.</p>
+<p>More information on <a href="https://github.com/alphagov/styleguides/blob/master/git.md#commit-messages">writing good commit messages</a> is in the GDS styleguide.</p>
+<h2 id="5-check-git-status-again">5) Check Git status again</h2>
+<p>Run <code>git status</code> again and it should say <code>Nothing to commit</code> - all the changes you selected have been saved.</p>
+<h2 id="6-learning-git">6) Learning Git</h2>
+<p>We recommend doing a tutorial on Git basics. Once you’ve done that, the best thing is to keep using Git each day (commit at least one change, etc) so it becomes familiar to you. Ask developers on your team to help you until you’re comfortable on your own.</p>
+<p><a href="https://try.github.io/levels/1/challenges/1">GitHub tutorial on git</a></p>
+<p><a href="http://think-like-a-git.net/">Advanced git tutorial</a></p>
+<blockquote>
+<p>Git can be used via the command line or using an app. It’s up to you which you learn. Most developers use the command line, so if you’d like help from them, it’s often better to use that.</p>
+</blockquote>
+
+
+		</div>
+
+	</div>
+	
+</main>
+{% endblock %}

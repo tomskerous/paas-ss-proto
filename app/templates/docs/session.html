@@ -1,0 +1,36 @@
+{% extends "proto-kit-layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main" class="docs markdown">
+	<div class="breadcrumbs">
+	  <ol role="breadcrumbs">
+	    <li><a href="../docs.html">GOV.UK prototype kit</a></li>
+	    <li><a href="tutorials-and-examples.html">Tutorials and examples</a></li>
+	  </ol>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			<h1 id="storing-data-in-session">Storing data in session</h1>
+<p><strong>Advanced topic</strong></p>
+<p>If you need to store data for each user, the best way to do it is using session data.</p>
+<p>This means that if more than one person is using your prototype, their data will not get mixed up.</p>
+<p>The easiest way to clear session data is to use &#39;Incognito mode&#39; for each user, and close that window when you&#39;re done.</p>
+<h2 id="how-to-use">How to use</h2>
+<p>In a route function, refer to <code>req.session</code>.</p>
+<p>For example you might have <code>req.session.over18</code> or <code>req.session.firstName</code>.</p>
+<p>You can see a full example here:</p>
+<p><a href="https://github.com/expressjs/session#example">https://github.com/expressjs/session#example</a></p>
+<p>You can read more about Express Session here:</p>
+<p><a href="https://github.com/expressjs/session">https://github.com/expressjs/session</a></p>
+
+
+		</div>
+
+	</div>
+	
+</main>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "proto-kit-layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main" class="docs markdown">
+	<div class="breadcrumbs">
+	  <ol role="breadcrumbs">
+	    <li><a href="../docs.html">GOV.UK prototype kit</a></li>
+	    <li><a href="tutorials-and-examples.html">Tutorials and examples</a></li>
+	  </ol>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			<h1 id="creating-routes">Creating routes</h1>
+<p>You may want to make prototypes that are more complex than simple HTML files. For example, you may want to respond to input from a form, and show different pages based on answers given by the user.</p>
+<p>To do this you will need to create &#39;routes&#39; - rules for the server to respond to certain URLs.</p>
+<p>For example, with a route of <code>/sample</code> the URL is:</p>
+<pre><code>http://localhost:3000/sample
+</code></pre><p>All routes for the application are kept in the <code>routes.js</code> file. They follow this format:</p>
+<pre><code>verb(route, callback(request, response) {
+    response.render(template, data);
+});
+</code></pre><p>Let&#39;s break this down into bits:</p>
+<ul>
+<li><strong>verb</strong> : the type of request (&#39;get&#39; or &#39;post&#39;)</li>
+<li><strong>route</strong> : the route section of the URL as explained above</li>
+<li><strong>callback</strong> : a function that contains the code executed when that route is requested</li>
+<li><strong>request</strong> : the 1st parameter sent to the callback, an object representing the HTTP request made</li>
+<li><strong>response</strong> : the 2nd parameter sent to the callback, an object representing the HTTP response that will be sent</li>
+<li><strong>response.render</strong> : method of the response object used to create a page to send back to the browser that made the request</li>
+<li><strong>template</strong> : the 1st parameter sent to response.render, the name of the template file used to render the page, minus its <code>.html</code> extension</li>
+<li><strong>data</strong> : [optional] the 2nd parameter sent to response.render, an object containing variables to send into the template</li>
+</ul>
+<p>So as an example, a request for the URL <code>http://localhost:3000/examples/template-data</code> has this route:</p>
+<pre><code>router.get(&#39;/examples/template-data&#39;, function(req, res) {
+    res.render(&#39;examples/template-data&#39;, { &#39;name&#39; : &#39;Foo&#39; });
+});
+</code></pre><p>We are saying that for a <code>get</code> request for the <code>/template-data</code> route we should run the code:</p>
+<pre><code>res.render(&#39;examples/template-data&#39;, { &#39;name&#39; : &#39;Foo&#39; });
+</code></pre><p>This is the <code>render</code> method of the <code>res</code> parameter being run with two parameters: </p>
+<ul>
+<li>the template called <code>template-data</code></li>
+<li>the data object <code>{ &#39;name&#39; : &#39;Foo&#39; }</code></li>
+</ul>
+<p>Template files are found this way: <code>/views/</code> + <code>template</code> parameter + <code>.html</code>. The <code>sample</code> template therefore points to the <code>/views/examples/template-data.html</code> file. </p>
+<p>In the same way, the template <code>/examples/hello_world</code> would point to the <code>/examples/hello_world.html</code> file.</p>
+<p><a href="http://expressjs.com/4x/api.html#app.VERB">Read the Express documentation for routes</a></p>
+
+
+		</div>
+
+	</div>
+	
+</main>
+
+{% endblock %}

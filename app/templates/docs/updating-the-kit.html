@@ -1,0 +1,107 @@
+{% extends "proto-kit-layout.html" %}
+
+{% block content %}
+<main id="content" role="main" class="docs markdown">
+	<div class="breadcrumbs">
+	  <ol role="breadcrumbs">
+	    <li><a href="../docs.html">GOV.UK prototype kit</a></li>
+	    <li><a href="tutorials-and-examples.html">Tutorials and examples</a></li>
+	  </ol>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			<h1 id="updating-the-kit">Updating the kit</h1>
+<h2 id="updating">Updating</h2>
+<p><strong>Important note</strong></p>
+<p>If you have made any changes outside the <code>app</code> folder, this process will destroy those changes. We will try and improve the update process to avoid this, but in the meantime you will need to make a note of your changes outside <code>app</code>, and add them back after updating.</p>
+<h3 id="steps">Steps</h3>
+<p>Download the latest prototype kit zip file from GitHub</p>
+<p>In your project, delete everything apart from the <code>app</code> and <code>.git</code> folder</p>
+<p>Copy everything from the latest kit to your project, apart from the <code>app</code> folder</p>
+<hr>
+<h2 id="updating-via-the-command-line-advanced-">Updating via the command line (Advanced)</h2>
+<p>If you have experience with the command line and your prototype is running within a git source repository then you can choose to update the kit with a series of commands.</p>
+<p>Updating via the command line involves fetching the latest code from the &#39;upstream&#39; remote repository and then merging it into the git branch that contains your version of the prototyping kit. Below are the steps for doing that in detail.</p>
+<h3 id="steps">Steps</h3>
+<h4 id="view-git-remote-s-">View git remote(s)</h4>
+<p>Firstly change to the base directory of your prototyping kit in terminal, for example:</p>
+<pre><code>cd ~/sites/govuk_prototype_kit
+</code></pre><p>Once in the directory start by listing the git remote(s) you have referenced from your machine. To do this you type:</p>
+<p> <code>git remote -v</code> and hit enter</p>
+<p>This will typically output a list of all the remote git repositories that have the prototype code, for example:</p>
+<pre><code>origin  https://github.com/paulmsmith/govuk_prototype_kit.git (fetch)
+origin  https://github.com/paulmsmith/govuk_prototype_kit.git (push)
+</code></pre><p>So long as you can see a list of repositories as above, we can move on to adding a reference to the original &#39;alphagov&#39; repository which we will need in order to update.</p>
+<h4 id="adding-the-upstream-remote-repository">Adding the upstream remote repository</h4>
+<p>To add the alphagov remote repository, type the following command and hit enter:</p>
+<pre><code>git remote add upstream https://github.com/alphagov/govuk_prototype_kit.git
+</code></pre><p>All being well, you will just return to a command prompt, now if you type:
+<code>git remote -v</code></p>
+<p>You should see an &#39;upstream&#39; in your list, for example:</p>
+<pre><code>origin    https://github.com/paulmsmith/govuk_prototype_kit.git (fetch)
+origin    https://github.com/paulmsmith/govuk_prototype_kit.git (push)
+upstream    https://github.com/alphagov/govuk_prototype_kit.git (fetch)
+upstream    https://github.com/alphagov/govuk_prototype_kit.git (push)
+</code></pre><h4 id="merging-from-upstream">Merging from upstream</h4>
+<p>Now that you&#39;ve added the upstream remote, you can merge the latest code into yours with the following commands.</p>
+<p>First you will &#39;fetch&#39; the latest code from the upstream latest-release branch. Type the following command and wait a few seconds.</p>
+<pre><code>git fetch upstream latest-release
+</code></pre><p>You will see it output a few lines telling you that was successful, for example:</p>
+<pre><code>From https://github.com/alphagov/govuk_prototype_kit
+ * branch            latest-release    -&gt; FETCH_HEAD
+</code></pre><p>Next, we will merge the branch we just &#39;fetched&#39; into our master branch (note: you can substitute &#39;master&#39; for the branch you want to merge into if different)</p>
+<pre><code>git checkout master &amp;&amp; git merge FETCH_HEAD
+</code></pre><p>You shouldn&#39;t have any merge conflicts if you&#39;ve not changed files outside of the &#39;app&#39; folder. If you do, there are plenty of ways to fix the conflicts and <a href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/">github has instructions</a> that should be easy to follow if you need a refresher course.</p>
+<p>Check that the application starts. In terminal or command prompt type:</p>
+<pre><code>npm start
+</code></pre><p>After the kit has started, you should see a message telling you that the kit is running:</p>
+<pre><code>Listening on port 3000 url: http://localhost:3000
+</code></pre><p>If you see an error after updating, you may need to download extra code used by the kit before it can run.</p>
+<p>You can get this by running:</p>
+<pre><code>npm install
+</code></pre><p>The install may take up to a minute. Whilst installing it may WARN about some items - this is ok. As long as there are no ERRORs you can continue.</p>
+<p>In terminal:</p>
+<pre><code>npm start
+</code></pre><p>If you still have an error, you can <a href="https://github.com/alphagov/govuk_prototype_kit/issues">raise an issue within github</a> or ask in the <a href="https://ukgovernmentdigital.slack.com/messages/prototype-kit/">Slack channel for users of the prototype kit</a> by providing as much information as you can about the error and the computer you are attempting to run the prototyping kit on.</p>
+<hr>
+<h2 id="converting-old-prototypes">Converting old prototypes</h2>
+<p>Earlier versions of the prototype kit used a different templating language called Mustache.</p>
+<p>Converting Mustache templates to Nunjucks ones is relatively simple. Here are the main things you&#39;ll need to do:</p>
+<h3 id="template-inheritance">Template inheritance</h3>
+<pre><code>{{&lt;layout}}
+
+{{/layout}}
+</code></pre><p>Becomes…</p>
+<pre><code>{% extends &quot;layout.html&quot; %}
+</code></pre><h3 id="template-blocks">Template blocks</h3>
+<pre><code>{{$pageTitle}}
+    GOV.UK prototype kit
+{{/pageTitle}}
+</code></pre><p>Becomes…</p>
+<pre><code>{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
+</code></pre><p>and</p>
+<pre><code>{{$content}}
+.......
+{{/content}}
+</code></pre><p>Becomes...</p>
+<pre><code>{% block content %}
+........
+{% endblock %}
+</code></pre><h3 id="includes">Includes</h3>
+<pre><code>{{&gt;includes/breadcrumbs}}
+</code></pre><p>Becomes…</p>
+<pre><code>{% include &quot;includes/breadcrumbs.html&quot; %}
+</code></pre>
+
+		</div>
+
+	</div>
+	
+</main>
+
+{% endblock %}

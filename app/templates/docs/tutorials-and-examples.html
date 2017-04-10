@@ -1,0 +1,178 @@
+{% extends "proto-kit-layout.html" %}
+
+{% block content %}
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="../docs.html">GOV.UK prototype kit</a></li>
+    </ol>
+  </div>
+
+  <h1 class="heading-xlarge">Tutorials and examples</h1>
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">Tutorials</h2>
+      <p>These tutorials are being actively developed. If you have suggestions for improvements, we'd love to hear from you.</p>
+    </div>
+  </div>
+  <div class="grid-row">
+    <div class="column-third">
+      <h3 class="heading-small">Getting started</h3>
+      <ul class="list list-bullet">
+        <li><a href="../../codeload.github.com/alphagov/govuk_prototype_kit/zip/v5.1.0">Download kit (zip)</a></li>
+        <li><a href="install/introduction.html">Simple install guide</a>
+          <ol class="list list-number">
+            <li><a href="install/requirements.html">Kit requirements</a></li>
+            <li><a href="install/install-the-kit.html">Install the kit</a></li>
+            <li><a href="install/run-the-kit.html">Run the kit</a></li>
+          </ol>
+        </li>
+        <li><a href="install/developer-install-instructions.html">Advanced install guide</a></li>
+      </ul>
+
+
+    </div>
+    <div class="column-third">
+      <h3 class="heading-small">Basic usage</h3>
+      <ul class="list list-bullet">
+        <li><a href="making-pages.html">Making pages</a></li>
+        <li><a href="writing-css.html">Writing CSS</a></li>
+        <li><a href="setting-up-git.html">Setting up Git</a></li>
+        <li><a href="{{ url_for('docs.publishing')}}">Publishing on the web (PaaS)</a></li>
+        <li><a href="examples/template-data.html">Passing data into a template</a></li>
+        <li><a href="tips-and-tricks.html">Tips and tricks</a></li>
+        <li><a href="updating-the-kit.html">Updating the kit</a></li>
+      </ul>
+    </div>
+    <div class="column-third">
+      <h3 class="heading-small">Advanced usage</h3>
+      <ul class="list list-bullet">
+        <li>
+          <a href="examples/pass-data.html">Passing data from page to page</a>
+        </li>
+        <li><a href="examples/branching.html">Branching</a>
+          <p class="font-xsmall">(Showing a different page based on user input)</p>
+        </li>
+        <li><a href="creating-routes.html">Creating routes (server side programming)</a></li>
+        <li><a href="examples/override-service-name.html">Override the service name on one page</a></li>
+        <li><a href="session.html">Storing data in session</a></li>
+        <li><a href="using-verify.html">Using GOV.UK Verify</a></li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">Page templates</h2>
+      <p class="text">
+        Use these as the basis for your prototypes.
+        We recommend making copies the files rather than directly editing them.
+      </p>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+
+
+    <div class="column-third">
+      <h3 class="heading-small">Components</h3>
+      <ul class="list list-bullet">
+        <li>
+          <a href="examples/elements/grid-layout.html">
+            Grid layout
+          </a>
+        </li>
+        <li>
+          <a href="examples/elements/typography.html">
+            Typography
+          </a>
+        </li>
+        <li>
+          <a href="examples/elements/forms.html">
+            Basic form example
+          </a>
+        </li>
+        <li>
+          <a href="examples/elements/radio-buttons-checkboxes.html">
+            Radio buttons and checkboxes
+          </a>
+        </li>
+        <li>
+          <a href="examples/elements/toggled-content.html">
+            Toggling content
+          </a>
+        </li>
+        <li>
+          <a href="examples/template-partial-areas.html">
+            Template partial areas
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="column-third">
+
+      <h3 class="heading-small">Entire pages</h3>
+      <ul class="list list-bullet">
+        <li>
+          <a href="examples/blank-govuk.html">
+            Blank
+          </a>
+          /
+          <a href="examples/blank-unbranded.html">
+            Blank (non-GOV.UK)
+          </a>
+        </li>
+        <li>
+          <a href="examples/start-page.html">
+            Start page
+          </a>
+        </li>
+        <li>
+          <a href="examples/template-content-page.html">
+            Content page
+          </a>
+        </li>
+        <li>
+          <a href="examples/task-list-page.html">
+            Task list
+          </a>
+        </li>
+        <li>
+          <a href="examples/check-your-answers-page.html">
+            Check your answers
+          </a>
+        </li>
+        <li>
+          <a href="examples/confirmation-page.html">
+            Confirmation
+          </a>
+        </li>
+        <li>
+          Question pages
+          <ul class="list list-bullet">
+            <li>
+              <a href="examples/template-question-page-blank.html">
+                Blank
+              </a>
+            </li>
+            <li>
+              <a href="examples/question-page.html">
+                Date of birth
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

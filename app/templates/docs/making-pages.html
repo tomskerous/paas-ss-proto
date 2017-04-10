@@ -1,0 +1,51 @@
+{% extends "proto-kit-layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main" class="docs markdown">
+	<div class="breadcrumbs">
+	  <ol role="breadcrumbs">
+	    <li><a href="../docs.html">GOV.UK prototype kit</a></li>
+	    <li><a href="tutorials-and-examples.html">Tutorials and examples</a></li>
+	  </ol>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			<h1 id="making-pages">Making pages</h1>
+<p>Save all HTML pages (called templates below) to the <code>app/views</code> folder otherwise they won&#39;t be recognised by the application.</p>
+<p>All template files should have the <code>.html</code> extension.</p>
+<p>Any template will be automatically served. For example if you add a template called <code>help.html</code> and then go to <code>localhost:3000/help</code> in your browser, you will see that page.</p>
+<p>Folders also work, so you can make the template <code>views/account/profile.html</code>, and then view the page by going to <code>localhost:3000/account/profile</code>.</p>
+<p>For more complex prototypes, you will need to use Nunjucks.</p>
+<h2 id="nunjucks">Nunjucks</h2>
+<p>All templates used in your app should be written in <a href="https://mozilla.github.io/nunjucks/templating.html">Nunjucks</a> syntax.</p>
+<p>For example, the following route could be added to <code>routes.js</code>:</p>
+<pre><code>router.get(&#39;/hello-world&#39;, function (req, res) {
+  res.render(&#39;hello_world&#39;, {&#39;message&#39; : &#39;Hello world&#39;});
+});
+</code></pre><p>Our <code>views/hello_world.html</code> file would be:</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;Hello world page&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;{{ message }}.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>The resulting HTML page will be:</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;Hello world page&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;Hello world.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>You can read more in the <a href="https://mozilla.github.io/nunjucks/templating.html">Nunjucks documentation</a>.</p>
+
+
+		</div>
+
+	</div>
+	
+</main>
+{% endblock %}
