@@ -1,0 +1,78 @@
+{% extends "proto-kit-layout.html" %}
+
+{% block content %}
+<main id="content" role="main" class="docs markdown">
+	<div class="breadcrumbs">
+	  <ol>
+	    <li><a href="../../docs.html">GOV.UK prototype kit</a></li>
+	    <li><a href="../install.html">Install</a></li>
+	  </ol>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			<h1 id="requirements">Requirements</h1>
+<p>The kit runs on Mac, Windows and Linux. At a minimum you’ll need <code>node.js</code> (install instructions below) and a web browser.</p>
+<p>This guide recommends additional software which will be used in later guides.</p>
+<h2 id="admin-access">Admin access</h2>
+<p>If you have admin access to your machine, you can follow this guide to install the required software.</p>
+<p>If you do not have admin access, ask your computer administrator to install:</p>
+<ul>
+<li>Node.js 6.x.x</li>
+<li>Sublime Text 3</li>
+<li>Command line tools (Mac)</li>
+<li>Git bash (Windows)</li>
+</ul>
+<h2 id="terminal">Terminal</h2>
+<p>You&#39;ll need a terminal application to install, start and stop the kit. Using a terminal is sometimes called ‘using the command line’.</p>
+<h3 id="mac-users">Mac users</h3>
+<p>Macs come with <code>Terminal.app</code>. It’s located in the <code>Utilities</code> folder in the <code>Applications</code> folder. You can also find it using spotlight (magnifying glass icon in the top right) and typing &#39;terminal&#39;.</p>
+<h3 id="windows-users">Windows users</h3>
+<p>This guide will use <code>Git Bash</code> as a terminal instead of the existing <code>CMD</code> application. Git Bash is more fully featured and uses the same commands as Mac and Linux, so instructions in this guide work for all.</p>
+<p>Installing <code>git bash</code> installs two things for you: a terminal (for entering commands), and git (used later to share your work with others).</p>
+<h4 id="installing-git-bash">Installing git bash</h4>
+<p>Download <a href="https://git-scm.com/download/win">Git bash (direct download)</a>.</p>
+<p>Install with all default options.</p>
+<h3 id="entering-commands-in-the-terminal">Entering commands in the terminal</h3>
+<p>Commands to be entered in to the terminal will be inset like this:</p>
+<pre><code>command to be typed in to terminal
+</code></pre><p>Once you’ve typed the command, press enter to send it.</p>
+<h2 id="node-js-version-6-lts">Node.js version 6 LTS</h2>
+<p>The kit is designed to work with Node.js version 6 LTS. The kit works with any 6.x.x version.</p>
+<h3 id="check-if-you-have-node-js">Check if you have Node.js</h3>
+<p>In terminal (git bash in Windows):</p>
+<pre><code>node --version
+</code></pre><p>If it says <code>command not found</code> or <code>Error 0x2 starting node.exe --version</code> you don’t have node and will need to download and install it.</p>
+<p>If the version number starts with 6 you have the correct version installed.</p>
+<p>If it says another number such as <code>0.12</code> or <code>5.x.x</code>, you need to download and install version 6.</p>
+<h3 id="download-and-install-node-js">Download and install Node.js</h3>
+<h4 id="mac-windows-users">Mac / Windows users</h4>
+<p>Download version 6 from <a href="https://nodejs.org/en/">nodejs.org</a>.</p>
+<p>Run the installer with all default options.</p>
+<h4 id="linux-users">Linux users</h4>
+<p>Follow the instructions on the <a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions">Node.js</a> site. Make sure you get version 6, not 7.</p>
+<h3 id="once-node-is-installed">Once Node is installed</h3>
+<p>You’ll need to quit and restart the terminal to be able to use Node for the first time.</p>
+<p>To check it is installed correctly you can again run:</p>
+<pre><code>node --version
+</code></pre><p>If it’s installed correctly it should show a number starting with 6.</p>
+<h2 id="sublime-text">Sublime Text</h2>
+<p>You’ll need a text editor to edit and make changes to your prototype. We recommend <a href="http://www.sublimetext.com/">Sublime Text</a> - instructions later on will refer to Sublime Text.</p>
+<h2 id="command-line-tools-mac-">Command line tools (mac)</h2>
+<p>Mac users will need the OSx Command line tools.</p>
+<p>In terminal:</p>
+<pre><code>xcode-select --install
+</code></pre><p>If you already have command line tools, this will display <code>xcode-select: error: command line tools are already installed, use &quot;Software Update&quot; to install updates</code>.</p>
+<p><img src="../../public/images/docs/installing-mavericks-popup.png" alt="Screenshot of Command line tools popup message"></p>
+<p>If you don’t have command line tools, it will open an installer. Follow the instructions to install the command line tools.</p>
+<p><a href="install-the-kit.md.html" class="button">Next (install the kit)</a></p>
+
+
+		</div>
+
+	</div>
+	
+</main>
+{% endblock %}

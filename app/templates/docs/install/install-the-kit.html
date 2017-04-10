@@ -1,0 +1,72 @@
+{% extends "proto-kit-layout.html" %}
+
+{% block content %}
+<main id="content" role="main" class="docs markdown">
+	<div class="breadcrumbs">
+	  <ol>
+	    <li><a href="../../docs.html">GOV.UK prototype kit</a></li>
+	    <li><a href="../install.html">Install</a></li>
+	  </ol>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			<h1 id="install-the-kit">Install the kit</h1>
+<h2 id="download-the-kit-as-a-zip">Download the kit as a zip</h2>
+<p>The simplest way to get the kit is to <a href="../../../codeload.github.com/alphagov/govuk_prototype_kit/zip/v5.1.0">download it as a zip</a>. You&#39;ll use a new copy of the kit for each new prototype you make. That way your prototypes don’t interfere with each other.</p>
+<h3 id="decide-where-you-want-to-keep-your-prototypes">Decide where you want to keep your prototypes</h3>
+<p>We recommend keeping all your prototypes in one folder called <code>projects</code>.</p>
+<h4 id="mac-users">Mac users</h4>
+<p>Create a folder called <code>projects</code> in your home folder. You can open your home folder by opening a new finder window, and selecting <code>go &gt; home</code> from the top menu.</p>
+<p><img src="../../public/images/docs/mac-home-folder-projects.png" alt="Screenshot of a &#39;projects&#39; folder in the mac home folder"></p>
+<h4 id="windows-users">Windows users</h4>
+<p>Create a folder called <code>projects</code> in your <code>Documents</code> or <code>My Documents</code> folder.</p>
+<h3 id="unzip-the-kit">Unzip the kit</h3>
+<p>Unzip the kit you downloaded - you should end up with a folder called <code>govuk_prototype_kit-3.0.0</code></p>
+<h3 id="rename-the-kit">Rename the kit</h3>
+<p>Rename the folder to something descriptive for your prototype. For this guide, we’ll use <code>juggling-licence-prototype</code>.</p>
+<h3 id="move-the-kit-in-to-projects-folder">Move the kit in to projects folder</h3>
+<p>Move the kit in to your newly created <code>projects</code> folder.</p>
+<h2 id="terminal-basics">Terminal basics</h2>
+<p>The terminal (terminal on mac and linux, git bash on windows) lets you type in commands and run programs on your computer. You can also use it to browse your file system - to open folders, etc.</p>
+<p>Learning a few basic terminal commands can make using the kit much easier.</p>
+<ul>
+<li><a href="http://mac.appstorm.net/how-to/utilities-how-to/how-to-use-terminal-the-basics/">Tutorial on using terminal (mac)</a></li>
+<li><a href="https://openhatch.org/missions/windows-setup/open-git-bash-prompt">Tutorial on using git bash (windows)</a></li>
+</ul>
+<h3 id="navigating-to-your-prototype">Navigating to your prototype</h3>
+<p>You need to be able to navigate to your prototype from the terminal. Most commands for the kit need to be run from the prototype folder.</p>
+<h4 id="mac-users-">Mac users:</h4>
+<pre><code>cd ~/projects/juggling-licence-prototype
+</code></pre><h4 id="windows-users-">Windows users:</h4>
+<p>Navigating will depend on whether you have a <code>Documents</code> or a <code>My Documents</code> folder.</p>
+<p>Documents:</p>
+<pre><code>cd ~/Documents/projects/juggling-licence-prototype
+</code></pre><p>My Documents:</p>
+<pre><code>cd ~/My\ Documents/projects/juggling-licence-prototype
+</code></pre><h4 id="returning-to-this-folder">Returning to this folder</h4>
+<p>It’s important that you be able to navigate to your prototype in the terminal - most commands will need to be run from the prototype folder.</p>
+<p>To check you’re in the right folder, you can run <code>ls</code> (list items):</p>
+<pre><code>ls
+</code></pre><p>You should see a list of files inside the prototype, starting with <code>CHANGELOG.md, CONTRIBUTING.md, gulpfile.js etc</code></p>
+<blockquote>
+<p>If you don’t see these files, check that you installed the kit into the right location and named it correctly.</p>
+</blockquote>
+<h2 id="install-the-kit">Install the kit</h2>
+<h3 id="open-a-terminal-window">Open a terminal window</h3>
+<p>If you don’t already have one open, open a terminal window and navigate to your prototype folder.</p>
+<h3 id="install-modules">Install modules</h3>
+<p>You need to download extra code used by the kit before it can run. You can get this by running:</p>
+<pre><code>npm install
+</code></pre><p>The install may take up to a minute. Whilst installing it may <code>WARN</code> about some items - this is ok. As long as there are no <code>ERROR</code>s you can continue.</p>
+<p><a href="run-the-kit.md.html" class="button">Next (run the kit)</a></p>
+
+
+		</div>
+
+	</div>
+	
+</main>
+{% endblock %}

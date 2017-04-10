@@ -1,0 +1,37 @@
+{% extends "proto-kit-layout.html" %}
+
+{% block content %}
+<main id="content" role="main" class="docs markdown">
+	<div class="breadcrumbs">
+	  <ol>
+	    <li><a href="../../docs.html">GOV.UK prototype kit</a></li>
+	    <li><a href="../install.html">Install</a></li>
+	  </ol>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			<h1 id="instructions-for-developers">Instructions for developers</h1>
+<p>It&#39;s built on the <a href="http://expressjs.com/">Express</a> framework, and uses these GOV.UK resources:</p>
+<ul>
+<li><a href="https://github.com/alphagov/govuk_template">GOV.UK template</a></li>
+<li><a href="https://github.com/alphagov/govuk_frontend_toolkit">GOV.UK front end toolkit</a></li>
+<li><a href="https://github.com/alphagov/govuk_elements">GOV.UK elements</a></li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<p>node.js - version 6.x.x</p>
+<h2 id="install-dependencies">Install dependencies</h2>
+<pre><code>npm install
+</code></pre><h2 id="run-the-kit">Run the kit</h2>
+<pre><code>npm start
+</code></pre><p>Go to <a href="http://localhost:3000">localhost:3000</a> in your browser.</p>
+
+
+		</div>
+
+	</div>
+	
+</main>
+{% endblock %}
