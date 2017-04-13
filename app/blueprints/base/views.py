@@ -19,3 +19,7 @@ def product_page():
 def proto_docs():
   return render_template('docs.html')
 
+@base.route('/support')
+def support():
+  return render_template('support.html')
+
