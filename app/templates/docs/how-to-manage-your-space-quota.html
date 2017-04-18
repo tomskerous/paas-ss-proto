@@ -1,0 +1,60 @@
+{% extends "proto-kit-layout.html" %}
+
+{% block content %}
+<main id="content" role="main" class="docs markdown">
+	<div class="breadcrumbs">
+	  <ol role="breadcrumbs">
+	    <li><a href="/docs.html">GOV.UK prototype kit</a></li>
+	    <li><a href="tutorials-and-examples.html">Tutorials and examples</a></li>
+	  </ol>
+	</div>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+      <h1>How to manage your space quota</h1>
+
+      <p>Your trial PaaS account comes with a limited amount of space for your prototypes. There are things you can do to limit the amount of space you are using.</p>
+
+      <h2>Free up space</h2>
+      <p>It is worth checking to see if you have any prototypes running that are no longer needed.</p>
+      <p>To see all the apps you have running in your space run:</p>
+      <pre>
+<code>cf apps
+</code>
+</pre>
+      <p>To stop an app run:</p>
+      <pre>
+<code>cf stop [NAME_OF_YOUR_APP]
+</code>
+</pre>
+      <p>This will stop your app running but it will still have an active URL (“route” in Cloud Foundry speak) and count against your quota.</p>
+
+      <p>To completely remove an app and any active routes run:</p>
+      <pre><code>cf delete -r</code></pre>
+
+      <p>Running <code>cf apps</code> again will allow you to check it has been removed.</p>
+
+      <h2>Configure your deployment</h2>
+
+      <p>By default each app will use 1G of memory. Lots of prototypes don't need as much memory as that but it will still count against your quota.<p> <p>You can use a <code>manifest.yml</code> file to reduce the amount of memory an app uses.<p>
+
+      <p>Do this by including a <code>manifest.yml</code> file in the home directory of your prototype. The file should look similar to this:</p>
+
+<pre><code>---
+applications:
+- name: [NAME_OF_YOUR_APP]
+  memory: 128M
+</code></pre>
+
+      <p>The memory attribute requires a unit of measurement: M, MB, G, or GB, in upper case or lower case.</p>
+
+      <p>The manifest.yml file can also be used to reduce the complexity of your push command or add extra instances for resilience. There is more <a href="http://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html">information on using manifest.yml files</a> in the Cloud foundry developer docs.</p>
+
+      <p>If your still need more space contact support to talk about increasing your quota above the free tier.</p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
