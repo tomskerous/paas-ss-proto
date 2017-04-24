@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="bold-large">Account activated</h1>
+        <p>
+          For<br>
+          <strong class="heading-medium">{{ user_email | default('example@gmail.com') }}</strong>
+        </p>
+      </div>
+      <p>We have sent you a confirmation email.</p>
+
+      <h2 class="heading-medium">What happens next</h2>
+      <h3 class="heading-small">Developers</h3>
+      <p>To get started, look at our <a href="https://docs.cloud.service.gov.uk/#quick-setup-guide">Quick Setup Guide</a>, which helps you set up the Cloud Foundry command line tools and deploy a basic static site.</p>
+
+      <h3 class="heading-small">Designers</h3>
+      <p>To get started try <a href="https://paas-ss-proto.cloudapps.digital/docs/publishing-on-paas#2-install-cloud-foundry-cli">publishing the GOV.UK prototyping kit to the PaaS</a></p>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

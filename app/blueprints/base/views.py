@@ -2,6 +2,7 @@
 from flask import (
   render_template,
   Blueprint,
+  request,
   current_app)
 
 base = Blueprint('base', __name__)
@@ -26,3 +27,9 @@ def support():
 @base.route('/paas-for-designers')
 def paas_for_designers():
   return render_template('paas-for-designers.html')
+
+@base.route('/create-account-completed', methods=['GET', "POST"])
+def create_account_completed():
+  if request.method == 'POST':
+    email = request.form['email-addr']
+  return render_template('create-account-completed.html', user_email=email)
