@@ -23,3 +23,6 @@ def proto_docs():
 def support():
   return render_template('support.html')
 
+@base.route('/paas-for-designers')
+def paas_for_designers():
+  return render_template('paas-for-designers.html')

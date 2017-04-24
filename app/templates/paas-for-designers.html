@@ -1,0 +1,32 @@
+{% extends "layout-paas.html" %}
+
+{% block page_title %}Sample page - Flask prototyping{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="{{ url_for('base.product_page') }}" itemprop="item"><span itemprop="name">GOV.UK PaaS</span></a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">Designers</span></a>
+    </li>
+  </ol>
+</nav>
+{% endblock %}
+
+{% block content %}
+<main role="main" id="main">
+
+<div class="container">
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">PaaS for designers</h1>
+    </div>
+
+  </div>
+</div>
+
+</main>
+{% endblock %}
