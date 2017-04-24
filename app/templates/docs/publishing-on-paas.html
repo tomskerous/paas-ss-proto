@@ -32,16 +32,19 @@
         <p>You'll need to be able to log in to your account each time you want to publish a new version of a prototype.</p>
 
         <h2 id="2-install-cloud-foundry-cli" class="heading-medium">2) Install the Cloud Foundry CLI</h2>
-        <p>PaaS for government is built on top Cloud Foundry and you interact with it via the terminal/commandline.</p>
-        <p>Before we can do that we need to install a CLI that will allow us to do this. <a href="https://github.com/cloudfoundry/cli#downloads">Get the installer</a> from the Cloud foundry github page and run it.</p>
+        <p>PaaS for government is built on top Cloud Foundry. You interact with it via the terminal/commandline.</p>
+        <p>To do this we need to install a Commandline interface (<abbr>CLI</abbr>) tool. There are a couple of ways to do this.</p>
+        <p>You can <a href="https://github.com/cloudfoundry/cli#installers-and-compressed-binaries">get the install package (.pkg)</a> from the Cloud foundry github page. Once downloaded double click to start the installation.</p>
 
-        <p>Check that it has installed correctly by typing</p>
+        <p>Or if you <a href="https://github.com/cloudfoundry/cli#installing-using-a-package-manager">use a package manager</a> the Cloud Foundry CLI can be installed that way too.</p>
+
+        <p>After following your preferred method check that it has installed correctly by running</p>
         <pre><code>cf -v</code></pre>
 
         <p>You should get a messages like this, confirming the installed version:</p>
         <pre><code>cf version X.X.X…</code></pre>
 
-        <p>For more information check the<a href="https://docs.cloud.service.gov.uk/#quick-setup-guide ">PaaS setup docs</a>, or those of your provider.</p>
+        <p>For more information check the <a href="https://docs.cloud.service.gov.uk/#quick-setup-guide ">PaaS setup docs</a>.</p>
 
         <h2 id="3-login-to-cloud-foundry" class="heading-medium">3) Login to Cloud Foundry</h2>
 
