@@ -63,25 +63,32 @@
 
         <h2 id="4-choose-name-for-prototype" class="heading-medium">4) Choose name for prototype</h2>
 
-        <p>You need to choose a name for your app that's unique. This name will be used in the url for your prototype.</p>
+        <p>Locate the <code>manifest.yml</code> file in the home folder of your prototype. It should look similar to this:</p>
+
+<pre><code>---
+applications:
+- name: [NAME_OF_YOUR_APP]
+  memory: 128M</code></pre>
+
+        <p>If there isn't one, create it then copy and paste the content shown.</p>
+
+        <p>Next, replace [NAME_OF_YOUR_APP] with the name of your prototype. Choose a name that is unique. This name will be used in the url for your prototype.</p>
 
         <p>For example: <code>govuk-payments-prototype</code> will create an app at: <code>govuk-payments-prototype.cloudapps.digital</code></p>
-        
-        <p><a href="https://docs.cloud.service.gov.uk/#organisations-spaces-amp-targets">Find out more about how things are organised in the PaaS</a></p>
 
         <h2 id="5-push-your-app" class="heading-medium">5) Push your app</h2>
 
-        <p>For each prototype you want to put on the web you need to create what Cloud foundry calls an app.</p>
-
         <p>In the folder where you've been working on your prototype, run:</p>
 
-        <pre><code>cf push [NAME_OF_YOUR_APP]</code></pre>
+        <pre><code>cf push</code></pre>
 
-        <p>Replace [NAME_OF_YOUR_APP] with the name of your prototype.</p>
+        <p>This will create what Cloud foundry calls an app, if one by that name doesn't exist already. It will copy across all your prototype files.</p>
 
-        <p>The GOVUK prototyping kit will normally take about 3-5 minutes to deploy, other kits may take longer. If you encounter any issues please contact the GOV.UK PaaS support team if there are problems - we want to make this easy for you!</p>
+        <div class="panel">You can override the name in the manifest and push to a different URL by including the new name in the <code>cf</code> command. For example: <p><pre><code>cf push [new-name-here]</code></pre></p><p>This can be useful when testing multiple versions.</p></div>
 
-        <p>Once finished you should be provided with a URL for you prototype.</p>
+        <p>It will take a few minutes to deploy. If you encounter any issues please contact the <a href="#">GOV.UK PaaS support team</a> - we want to make this easy for you!</p>
+
+        <p>Once finished you will be provided with the URL for you prototype. You'll need this after we've set up the HTTP basic auth.</p>
 
         <p><img src="/static/images/paas_deploy_commandline.png" alt="Screeshot of commandline after successful deploy to PaaS" /></p>
 
