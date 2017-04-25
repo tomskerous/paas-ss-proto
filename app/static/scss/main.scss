@@ -30,7 +30,7 @@
 
 .with-hr {
   border-bottom: 1px solid $grey-2;
-  padding: $gutter-half 0;
+  padding: $gutter/3 0;
 }
 
 .form {
@@ -224,4 +224,8 @@ code {
   background: $purple;
   padding: 3px 8px 2px;
   margin-left: 5px;
+}
+
+.confirmation-callout {
+  margin-bottom: 0;
 }
