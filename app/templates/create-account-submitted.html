@@ -1,0 +1,33 @@
+{% extends "layout-paas.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="bold-large">Account created</h1>
+        <p>
+          PaaS username<br>
+          <strong class="heading-medium">{{ user_email | default('example@gmail.com') }}</strong>
+        </p>
+      </div>
+      <p class="with-hr">We have sent you a confirmation email.</p>
+
+      <h2 class="heading-medium">What happens next</h2>
+      <p>We have sent you a confirmation email with an activation link. You need to open the email and click on the link to complete the account set up.</p>
+
+      <p>The email contains information about your account and what you have available to you.</p>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
