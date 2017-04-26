@@ -15,7 +15,7 @@
         <h1 class="bold-large">Account created</h1>
         <p>
           PaaS username<br>
-          <strong class="heading-medium">{{ user_email | default('example@gmail.com') }}</strong>
+          <strong class="heading-medium">{{ session['email_addr'] | default('example@gmail.com') }}</strong>
         </p>
       </div>
       <p class="with-hr">We have sent you a confirmation email.</p>

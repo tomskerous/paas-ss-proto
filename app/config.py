@@ -10,6 +10,8 @@ env = os.environ
 
 DEBUG = bool(env.get('DEBUG', True))
 
+SECRET_KEY = 'zSt\x03\x82\x81\xe8\x8a\xea\xb5\x8a\xa2klF\xfa\t\xee\xe2l\x80\x9di\xe2'
+
 # XXX Don't change the following settings unless necessary
 
 # Skips concatenation of bundles if True, which breaks everything
