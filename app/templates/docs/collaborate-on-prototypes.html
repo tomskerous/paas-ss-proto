@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<main id="content" role="main">
+<main id="content" role="main" class="docs markdown">
   <div class="grid-row">
     <div class="column-two-thirds">
       <div class="breadcrumbs">
@@ -10,9 +10,38 @@
           <li><a href="../docs.html">GOV.UK Prototype kit</a></li>
         </ol>
       </div>
+
       <h1 class="heading-xlarge">Work on a prototype with colleagues</h1>
 
+      <p class="lede">This guide explains how to add a colleague to a prototype as well as explaining how to add a colleague to a subset of your prototypes.</p>
+
+
       <h2 id="add-to-proto" class="heading-medium">1. Add a colleague to your prototype</h2>
+
+      <p>You can give any colleague with a PaaS account access to a prototype you've published on the Paas.</p>
+
+      <p>All prototypes or apps sit within what the PaaS calls a space. Unless you have created additional spaces you have probably been working in your Sandbox space. To give access to a prototype you are actually granting access to a space, which can contain a number of prototypes.</p>
+
+      <p>Grant access by running this command:</p>
+
+      <pre><code>cf set-space-role [USERNAME] [ORGNAME] [SPACENAME] [ROLE]</code></pre>
+
+      <p>
+        <ul>
+          <li><code>cf set-space-role</code> is the CF command used to perform the action.</li>
+          <li><code>[USERNAME]</code> should be the email address your colleague uses for PaaS.</li>
+          <li><code>[ORGNAME]</code> is the PaaS organisation you belong to. Running <code>cf apps</code> will display your org in the first line of the commandline output.</li>
+          <li><code>[SPACENAME]</code> is the space a prototype belongs to. Again, running <code>cf apps</code> will help you determine the space name to use.</li>
+          <li><code>[ROLE]</code> is the permission level. It can be either <code>SpaceDeveloper</code> or <code>SpaceManager</code>. Space managers have the permissions to grant other people access to the space.</li>
+        </ul>
+      </p>
+
+      <p>This is an example command:</p>
+
+      <pre><code>cf set-space-role Jane@example.gov.uk csd-sso sandbox SpaceDeveloper</code></pre>
+
+      <p>This will grant Jane access to the sandbox space in the csd-sso organisation. She will have space developer level permissions.</p>
+
       <h2 id="add-to-multi-protos" class="heading-medium">2. Add a colleague to multiple prototypes</h2>
     </div>
 
