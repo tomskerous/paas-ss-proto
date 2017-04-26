@@ -1,19 +1,19 @@
 {% extends "layout-paas.html" %}
 
-{% block page_title %}Sample page - Flask prototyping{% endblock %}
+{% block page_title %}Create a PaaS account{% endblock %}
 
 {% block content %}
 <main id="content" role="main">
 
   <a href="{{ url_for('base.product_page') }}" class="link-back">Back</a>
 
-  <h1 class="heading-large">Request a PaaS account</h1>
+  <h1 class="heading-xlarge">Create a PaaS account</h1>
 
   <form action="/create-account-submitted" class="form account-form" method="post">
 
     <fieldset>
 
-      <legend class="visuallyhidden">Request a PaaS account</legend>
+      <legend class="heading-medium">Your details</legend>
 
       <div class="form-group">
         <label class="form-label" for="email-f1">Email</label>
@@ -27,6 +27,21 @@
 
       <div class="form-group">
         <label class="form-label" for="service-name-f4">Name of service team / programme</label>
+        <input class="form-control" id="service-name-f4" type="text">
+      </div>
+
+    </fieldset>
+
+    <fieldset>
+      <legend class="heading-medium">Add a password</legend>
+
+      <div class="form-group">
+        <label class="form-label" for="service-name-f4">Password</label>
+        <input class="form-control" id="service-name-f4" type="text">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="service-name-f4">Confirm password</label>
         <input class="form-control" id="service-name-f4" type="text">
       </div>
 
