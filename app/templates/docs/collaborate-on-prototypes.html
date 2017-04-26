@@ -8,6 +8,7 @@
       <div class="breadcrumbs">
         <ol>
           <li><a href="../docs.html">GOV.UK Prototype kit</a></li>
+          <li><a href="tutorials-and-examples.html">Tutorials and examples</a></li>
         </ol>
       </div>
 
@@ -21,6 +22,8 @@
       <p>You can give any colleague with a PaaS account access to a prototype you've published on the Paas.</p>
 
       <p>All prototypes or apps sit within what the PaaS calls a space. Unless you have created additional spaces you have probably been working in your Sandbox space. To give access to a prototype you are actually granting access to a space, which can contain a number of prototypes.</p>
+
+      <h3 class="heading-medium">Grant access to a colleague</h3>
 
       <p>Grant access by running this command:</p>
 
@@ -38,11 +41,66 @@
 
       <p>This is an example command:</p>
 
-      <pre><code>cf set-space-role Jane@example.gov.uk csd-sso sandbox SpaceDeveloper</code></pre>
+      <pre><code>cf set-space-role Jane@example.gov.uk paas-disc sandbox SpaceDeveloper</code></pre>
 
       <p>This will grant Jane access to the sandbox space in the csd-sso organisation. She will have space developer level permissions.</p>
 
       <h2 id="add-to-multi-protos" class="heading-medium">2. Add a colleague to multiple prototypes</h2>
+      <p>In PaaS you can group a set of prototypes into a Space. Then grant a colleague access to the space. This will give them access to all the contained prototypes at once.</p>
+
+      <p>To see what spaces you currently have run this:</p>
+
+      <pre><code>cf spaces</code></pre>
+
+      <p>Unless you or anyone else in your team has created new ones you will probably see only one, Sandbox, listed.</p>
+
+      <p>Let's look at how to create a new space, add some prototypes and then share with a colleague.</p>
+
+      <h3 class="heading-medium">Create a new space</h3>
+
+      <p>Create a new space with this command:</p>
+      <pre><code>cf create-space [SPACENAME] -o [ORGNAME]</code></pre>
+
+      <p>Where <code>[SPACENAME]</code> is what you'd like to call your space. For example, research-protos. <code>[ORGNAME] is the name of the organisation you belong to.</code></p>
+
+      <p>An example command would be:</p>
+
+      <pre><code>cf create-space research-protos -o paas-disc</code></pre>
+
+      <h3 class="heading-medium">Target space</h3>
+
+      <p>Once created you need to tell Cloud Foundry you want to work in that space. You do that by targeting it.</p>
+
+      <p>To target a space run:</p>
+
+      <pre><code>cf target -s [SPACENAME]</code></pre>
+      
+      <p>Eg</p>
+
+      <pre><code>cf target -s research-protos</code></pre>
+
+      <h3 class="heading-medium">Add prototypes</h3>
+
+      <p>To add prototypes go to home directory for each prototype and run the <code>cf push</code> command.</p>
+
+      <p>If you get stuck look at the <a href="/docs/publishing-on-paas">Publish to PaaS instructions</a>.</p>
+
+      <p>Once you've published a few prototypes to the space move on to the next step.</p>
+
+      <h3 class="heading-medium">Grant access to a colleague</h3>
+
+      <p>The final step is to grant access to your colleague. We do this in the same way explained in section one of this page.</p>
+
+      <p>In that section we had:</p>
+
+      <pre><code>cf set-space-role Jane@example.gov.uk paas-disc sandbox SpaceDeveloper</code></pre>
+
+      <p>Replace <code>sandbox</code> with the name of the new space you wish to grant someone access to. In our case the command would become:</p>
+
+      <pre><code>cf set-space-role Jane@example.gov.uk paas-disc research-protos SpaceDeveloper</code></pre>
+
+      <p>Your colleague should now have access to all the prototypes in that space.</p>
+
     </div>
 
 
