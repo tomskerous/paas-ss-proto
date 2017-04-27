@@ -241,3 +241,14 @@ code {
   border: 5px solid $page-colour;
   padding: 5px;
 }
+
+.docs-figure {
+  border: 1px solid $border-colour;
+  background: $highlight-colour;
+
+  figcaption {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+}
