@@ -228,4 +228,16 @@ code {
 
 .confirmation-callout {
   margin-bottom: 0;
+
+  .confirmation--title {
+    margin: 15px 0;
+  }
+}
+
+.icon-tick {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid $page-colour;
+  padding: 5px;
 }
