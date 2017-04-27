@@ -1,0 +1,16 @@
+/* 
+* Styles related to forms
+*/
+
+.form {
+  @extend %contain-floats;
+}
+
+.form-additional-link {
+  display: block;
+  margin-top: 15px;
+}
+
+.account-form {
+  margin-top: $gutter;
+}

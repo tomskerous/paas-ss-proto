@@ -19,6 +19,12 @@
 @import "patterns/callouts.scss";
 @import "patterns/definition-lists.scss";
 
+@import "components/forms.scss";
+@import "components/documentation.scss";
+@import "components/typography.scss";
+@import "components/paas-dashboard-pages.scss";
+
+/* some general styles, consider moving to separate files / components / patterns */
 #main {
   display: block;
   margin-bottom: $gutter * 3;
@@ -28,118 +34,10 @@
   @extend %site-width-container;
 }
 
-.with-hr {
-  border-bottom: 1px solid $grey-2;
-  padding: $gutter/3 0;
-}
-
-.form {
-  @extend %contain-floats;
-}
-
-.documentation-section {
-  margin-top: $gutter;
-}
-
-code {
-  background: #f5f5f5;
-  padding: 3px 3px;
-  border-radius: 3px;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-}
-
-.highlight {
-  font-weight: 700;
-}
-
-.form-additional-link {
-  display: block;
-  margin-top: 15px;
-}
-
-.dashboard-section {
-  .action-link {
-    float: right;
-    margin-top: -50px;
-  }
-  p:last-child {
-    margin-top: $gutter;
-  }
-  .column-full > .panel {
-    margin-top: 5px;
-  }
-}
-
-.space {
-  margin-top: 10px;
-  border-top: 1px solid $border-colour;
-}
-
-.apps-list {
-  border-right: 1px solid $border-colour;
-}
-
-.edit-name {
-  font-size: 14px;
-  font-weight: 400;
-  padding-left: 15px;
-}
-
-.space-section {
-  margin-bottom: $gutter * 2;
-
-  &__heading {
-    margin-top: 0;
-  }
-}
-
-.bottom-gutter {
-  margin-bottom: $gutter;
-}
-
-.space-list {
-  margin-bottom: $gutter;
-}
-
-.space-list-item {
-  border-top: 1px solid $border-colour;
-  padding: 8px 0 5px;
-
-  &__app {
-    border-top: 2px solid $border-colour;
-  }
-
-  &:last-child {
-    border-bottom: 1px solid $border-colour;
-  }
-
-  &__error {
-    border-left: 5px solid $error-colour;
-    padding-left: 10px;
-
-    .highlight {
-      color: $error-colour;
-    }
-
-    .error-msg {
-      margin-bottom: 0;
-      color: $error-colour;
-    }
-  }
-
-  .user-name {
-    margin-bottom: 5px;
-  }
-}
-
-.hint {
-  color: $secondary-text-colour;
-}
-
+/*
+* additional content below form
+* on request an account page
+*/
 .further-info-section {
   margin-top: $gutter * 1.5;
 
@@ -153,21 +51,10 @@ code {
   }
 }
 
-.account-form {
-  margin-top: $gutter;
-}
-
-.panel {
-  &-error { 
-    border-color: $error-colour;
-    color: $error-colour;
-    font-weight: 700;
-    background: lighten($error-colour, 55); }
-  &-warning { 
-    border-color: $yellow;
-    background: lighten($yellow, 30);}
-}
-
+/*
+* details, summary sections
+* on dashboard page
+*/
 .secondary-info {
   margin: $gutter 0;
 
@@ -178,46 +65,7 @@ code {
   }
 }
 
-.user-info-table td {
-  vertical-align: top;
-}
-
-.profile-aside {
-  border-top: 10px solid $link-colour;
-  padding-top: $gutter-half;
-}
-
-.app-details-aside {
-  border-top: 10px solid $link-colour;
-  margin-top: 45px;
-  padding-top: $gutter;
-
-  .heading-medium {
-    margin-top: 0;
-  }
-}
-
-.space-list-profile {
-  display: list-item;
-  list-style: none;
-}
-
-.app-info-table {
-  margin-top: 5px;
-  td {
-    border-bottom: 0;
-    border-right: 1px solid $border-colour;
-    padding: 5px 0 5px 10px;
-
-    &:last-child {
-      border-right: 0;
-    }
-    &:first-child {
-      padding-left: 0;
-    }
-  }
-}
-
+/* block colour role flag */
 .role-flag {
   font-weight: 700;
   color: $page-colour;
@@ -226,29 +74,14 @@ code {
   margin-left: 5px;
 }
 
-.confirmation-callout {
-  margin-bottom: 0;
-
-  .confirmation--title {
-    margin: 15px 0;
-  }
-}
-
+/*
+* tick icon in circle on 
+* account activated / completed page
+*/
 .icon-tick {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: 5px solid $page-colour;
   padding: 5px;
-}
-
-.docs-figure {
-  border: 1px solid $border-colour;
-  background: $highlight-colour;
-
-  figcaption {
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 5px;
-  }
 }

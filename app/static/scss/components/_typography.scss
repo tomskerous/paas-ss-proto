@@ -1,0 +1,21 @@
+/*
+* styles that tweak parts of the 
+* typography and content layout
+*/
+.with-hr {
+  border-bottom: 1px solid $grey-2;
+  padding: $gutter/3 0;
+}
+
+.highlight {
+  font-weight: 700;
+}
+
+.bottom-gutter {
+  margin-bottom: $gutter;
+}
+
+.hint {
+  color: $secondary-text-colour;
+}
+

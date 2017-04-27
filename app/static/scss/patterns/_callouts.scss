@@ -1,3 +1,8 @@
+/*
+* styles for callouts
+* mainly used on confirmation or done pages
+*/
+
 .callout {
   background: $turquoise;
   color: $page-colour;
@@ -21,4 +26,27 @@
       margin-bottom: 0;
     }
   }
+}
+
+.confirmation-callout {
+  margin-bottom: 0;
+
+  .confirmation--title {
+    margin: 15px 0;
+  }
+}
+
+/*
+* include styles for in page callout sections
+* such as errors or warnings
+*/
+.panel {
+  &-error { 
+    border-color: $error-colour;
+    color: $error-colour;
+    font-weight: 700;
+    background: lighten($error-colour, 55); }
+  &-warning { 
+    border-color: $yellow;
+    background: lighten($yellow, 30);}
 }
