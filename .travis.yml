@@ -7,7 +7,8 @@ install:
 - pip install -r requirements.txt
 - gem install bundle
 - python manage.py install_all_govuk_assets
-
+script:
+- pytest
 after_deploy:
 - "python manage.py runserver"
 deploy:
