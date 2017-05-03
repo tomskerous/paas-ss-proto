@@ -1,17 +1,16 @@
-language: node_js
-node_js:
-- 4.0
-- 6.0
+language: python
+python:
+- 3.2
 before_install:
 - npm install -g mocha
 install:
-- npm install
+- pip install -r requirements.txt
+- gem install bundle
+- python manage.py install_all_govuk_assets
 script:
 - npm test
-after_success:
-- "./create-release-tag.sh"
 after_deploy:
-- "./update-release-branch.sh"
+- "python manage.py runserver"
 deploy:
   provider: cloudfoundry
   api: https://api.cloud.service.gov.uk
