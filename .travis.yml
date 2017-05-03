@@ -1,6 +1,6 @@
 language: python
 python:
-- 3.2
+- 3.5
 before_install:
 - npm install -g mocha
 install:
